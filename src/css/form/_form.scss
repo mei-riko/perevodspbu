@@ -1,0 +1,9 @@
+.form{
+    margin: 0;
+
+    &__agree{
+        font-size: 12px;
+        color: $gray-600;
+        margin-top: $spacer/3;
+    }
+}

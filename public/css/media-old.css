@@ -1,0 +1,118 @@
+@media (min-width: 576px) {
+    .container-fluid{
+        padding: 0 15px;
+    }
+    .section-slider .slider-title{
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .list-advantages .ad-intro{
+        font-size: 1rem;
+        height: 80px;
+    }
+    .list-advantages .ad-icon{
+        height: 80px;
+    }
+    
+    .content-icon{
+        width: 40px;
+    }
+    .box-white .content-title, .box-white .content-intro {
+        padding-left: 55px;
+    }
+    
+    /*Reviews*/
+    .review-info{
+        padding: 30px;
+        padding-right: 120px;
+    }
+    .owl-carousel-reviews .review-intro{
+        height: 120px;
+    }
+    .owl-carousel .owl-item .review-info .review-photo,
+    .review-info .review-photo{
+        width: 60px;
+        top: 30px;
+        right: 30px;
+    }
+}
+@media (min-width: 768px) {
+    .panel-top .col-left{width:auto;}
+    .panel-bottom .navbar-logo .navbar-logo-image{
+        width: 280px;
+        height: auto;
+    }
+    .panel-bottom .btn{position:relative;top:0;left:0;}
+    
+    .owl-carousel-reviews .review-intro{
+        height: 160px;
+    }
+    
+    .section-slider{
+        padding-top:45px;
+        padding-bottom:45px;
+    }
+    .section-slider .slider-title{
+        font-size:32px;
+        line-height:38px;
+    }
+}
+@media(min-width:992px){
+    /* .panel-top .navbar-sublogo .navbar-sublogo-image{
+        width:auto;
+        height:34px;
+    } */
+    .panel-top .list-inline,
+    .panel-top .col-right{font-size: 14px;}
+    
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left:1rem;
+        padding-right:0;
+        font-size:12px;
+    }
+}
+@media(min-width:1200px){
+
+    .panel-top .navbar-sublogo .navbar-sublogo-image{
+        width:100%;
+        height:auto;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left:1rem;
+        padding-right:1rem;
+        font-size: 14px;
+    }
+    .section-slider .slider-title{
+        font-size:38px;
+        line-height:42px;
+    }
+
+    .content-icon{left:2.75rem;}
+    
+    /*Reviews*/
+    .review-info{
+        padding-right: 160px;
+    }
+    .owl-carousel .owl-item .review-info .review-photo,
+    .review-info .review-photo{
+        width: 100px;
+    }
+    .owl-carousel-reviews .review-intro{
+        height: 80px;
+    }
+    
+    .contact-form .container-fluid{
+        position: relative;
+    }
+    .contact-form .container-fluid:after{
+        position: absolute;
+        top:0;
+        left: 15px;
+        z-index: -1;
+        width: calc(100% - 30px);
+        height:100%;
+        content:'';
+        display:block;
+        background-color: #fafafa;
+    }
+}

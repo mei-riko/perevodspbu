@@ -1,0 +1,5 @@
+.content{
+    background-color: $white;
+    @extend .py-3;
+    @extend .px-4;
+}

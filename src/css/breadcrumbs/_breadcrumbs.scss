@@ -1,0 +1,42 @@
+.breadcrumbs{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item{
+        position: relative;
+        padding-right: 10px;
+        margin-right: 10px;
+        color: $gray-500;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            margin-top: -3px;
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-left: 4px solid #9b9b9b;
+            content: '';
+            cursor: default;
+        }
+
+        &--active{
+            padding-right: 0px;
+            margin-right: 0px;
+            &::after{
+                display: none;
+            }
+        }
+    }
+
+    &__link{
+        color: $gray-500;
+        &:hover, &:focus{
+            color: $red;
+        }
+    }
+}
