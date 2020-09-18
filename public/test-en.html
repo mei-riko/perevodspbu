@@ -21,28 +21,55 @@
       <div class="content">
         <div class="row">
           <div class="col-lg-8 col-12 test">
-            <h1>Тестирование по английскому языку</h1>
-            <p>Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.</p>
-            <button class="btn btn_action" id="startButton">Начать тестирование</button>
+            <h1 class="mb-3">Тестирование по английскому языку</h1>
+            <div class="test__welcome">
+              <p>Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.</p>
+              <button class="btn btn_action" id="startButton">Начать тестирование</button>
+            </div>
             <div class="test__content" id="contentTest">
-              <div class="text__alert text-bold mb-4">До завершения тестирования осталось: <span id="timer" style="color: #2e62de;"></span></div>
-              <div class="card test__card">
-                <div class="card-header" id="heading1"><a data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Вопросы 1-10</a></div>
-                <div class="collapse" id="collapse1" aria-labelledby="heading1" data-parent="#accordionQuestion">
-                  <div class="card-body">
-                    <div class="question question1 mb-3"></div>
-                    <p class="question__title h5">1. Water <span class="z text-bold" style="display:inline;">...</span><span class="1a text-bold" style="display:none;">is to boil</span><span class="1b text-bold" style="display:none;">is boiling</span><span class="1c text-bold" style="display:none;">boils</span>at 100 degrees Celsius.</p>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input class="custom-control-input answer-input" type="radio" id="1a" name="question1" value="a"/>
-                      <label class="custom-control-label" for="1a">is to boil</label>
+              <div class="test__alert mb-2">До завершения тестирования осталось: <span class="text-bold text-red" id="timer"></span></div>
+              <div class="accordion mb-3" id="accordionQuestion">
+                <div class="card test__card">
+                  <div class="card__header" id="heading1"><a class="card__title" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Вопросы 1-10</a></div>
+                  <div class="collapse show" id="collapse1" aria-labelledby="heading1" data-parent="#accordionQuestion">
+                    <div class="card__body">
+                      <div class="question question1">
+                        <p class="question__title h5">1. Water <span class="z question__answer" style="display:inline;">... </span><span class="1a question__answer" style="display:none;">is to boil </span><span class="1b question__answer" style="display:none;">is boiling </span><span class="1c question__answer" style="display:none;">boils </span>at 100 degrees Celsius.</p>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1a" name="question1" value="a"/>
+                          <label class="custom-control-label" for="1a">is to boil</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1b" name="question1" value="b"/>
+                          <label class="custom-control-label" for="1b">is boiling</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1c" name="question1" value="c"/>
+                          <label class="custom-control-label" for="1c">boils</label>
+                        </div>
+                      </div>
                     </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input class="custom-control-input answer-input" type="radio" id="1b" name="question1" value="b"/>
-                      <label class="custom-control-label" for="1b">is boiling</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input class="custom-control-input answer-input" type="radio" id="1c" name="question1" value="c"/>
-                      <label class="custom-control-label" for="1c">boils</label>
+                  </div>
+                </div>
+                <div class="card test__card">
+                  <div class="card__header" id="heading2"><a class="card__title" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Вопросы 11-20</a></div>
+                  <div class="collapse" id="collapse2" aria-labelledby="heading2" data-parent="#accordionQuestion">
+                    <div class="card__body">
+                      <div class="question question11 mb-3">
+                        <p class="question__title h5">11. Water <span class="z text-bold" style="display:inline;">...</span><span class="1a text-bold" style="display:none;">is to boil</span><span class="1b text-bold" style="display:none;">is boiling</span><span class="1c text-bold" style="display:none;">boils</span>at 100 degrees Celsius.</p>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1a" name="question11" value="a"/>
+                          <label class="custom-control-label" for="1a">is to boil</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1b" name="question11" value="b"/>
+                          <label class="custom-control-label" for="1b">is boiling</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1c" name="question11" value="c"/>
+                          <label class="custom-control-label" for="1c">boils</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -51,57 +78,61 @@
             </div>
             <div class="test__form" id="beforeResult">
               <p>Укажите свои контактные данные для получения результата тестирования. Баллы покажем сразу, а готовый к распечатке файл отправим на почту.</p>
-              <form class="form ajax_form" name="formTest" method="post" action="test-level">
-                <div class="form-group">
-                  <p class="small text-bold">Укажите Ваши ФИО <sup>*</sup></p>
-                  <input class="form-control form-control-has-validation" type="text" id="name" name="name" value=""/><span class="form-validation error_name">Укажите ваши ФИО</span>
-                  <div class="small mt-2">Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.</div>
+              <form class="form ajax_form" name="formTest" method="post" action="">
+                <div class="d-none">
+                  <input class="input input--full" data-type="result" type="text" name="testResult" value=""/>
+                  <input class="input input--full" data-type="recommendation" type="text" name="recommendation" value=""/>
+                  <input class="input input--full" data-type="level" type="text" name="level" value=""/>
                 </div>
-                <div class="form-row">
-                  <div class="col-12 col-md-6 mb-4 mb-md-0">
-                    <p class="small text-bold">Введите своей e-mail <sup>*</sup></p>
-                    <input class="form-control form-control-has-validation" type="email" id="email" name="email" value=""/><span class="form-validation error_email"></span>
+                <div class="form-group">
+                  <p class="form__label">Укажите Ваши ФИО <sup>*</sup></p>
+                  <input class="input input--full error" type="text" id="name" name="name" value=""/><span class="form__validation error error_name">Укажите ваши ФИО</span>
+                  <div class="small">Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.</div>
+                </div>
+                <div class="form__row row mt-3">
+                  <div class="col-12 col-md-6">
+                    <p class="form__label">Введите своей e-mail <sup>*</sup></p>
+                    <input class="input input--full" type="email" id="email" name="email" value=""/><span class="form__validation error_email"></span>
                   </div>
                   <div class="col-12 col-md-6">
-                    <p class="small text-bold">Контактный телефон <sup>*</sup></p>
-                    <input class="phone form-control form-control-has-validation" type="tel" id="phone" name="phone" value=""/>
+                    <p class="form__label">Контактный телефон <sup>*</sup></p>
+                    <input class="input input--full phone" type="tel" id="phone" name="phone" value="7"/><span class="form__validation error_phone"></span>
                   </div>
                 </div>
-                <div class="form-group mt-4">
-                  <p class="small text-bold">Какое у вас образование?</p>
-                  <select class="form-control" id="selectEducation" name="education">
-                    <option value="высшее">высшее</option>
-                    <option value="неоконченное высшее (студент)">неоконченное высшее (студент)</option>
-                    <option value="среднее специальное">среднее специальное</option>
-                    <option value="среднее">среднее</option>
-                    <option value="другое">другое</option>
-                  </select>
+                <div class="form__row row mt-3">
+                  <div class="col-12 col-md-6 mb-1">
+                    <p class="form__label">Какое у вас образование?</p>
+                    <select class="input input--full" id="selectEducation" name="education">
+                      <option value="высшее">высшее</option>
+                      <option value="неоконченное высшее (студент)">неоконченное высшее (студент)</option>
+                      <option value="среднее специальное">среднее специальное</option>
+                      <option value="среднее">среднее</option>
+                      <option value="другое">другое</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-6 mb-1">
+                    <p class="form__label">Выберите программу обучения:</p>
+                    <select class="input input--full" id="select" name="programm">
+                      <option value="Выберите программу...">Выберите программу... </option>
+                      <option value="Английский язык для преподавателей специальных дисциплин в&amp;nbsp;вузах">Английский язык для преподавателей специальных дисциплин в&nbsp;вузах</option>
+                      <option value="Английский с элементами делового и&amp;nbsp;профессионального общения">Английский с элементами делового и&nbsp;профессионального общения"</option>
+                      <option value="Переводчик в сфере профессиональной коммуникации">Переводчик в сфере профессиональной коммуникации</option>
+                      <option value="Конференц-перевод">Конференц-перевод</option>
+                      <option value="Синхронный перевод">Синхронный перевод</option>
+                      <option value="Гид-переводчик">Гид-переводчик</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="form-group mt-4">
-                  <p class="small text-bold">Выберите программу обучения:</p>
-                  <select class="form-control" id="select" name="programm">
-                    <option value="Выберите программу..."> </option>
-                    <option value="Английский язык для преподавателей специальных дисциплин в&amp;nbsp;вузах">Английский язык для преподавателей специальных дисциплин в&nbsp;вузах</option>
-                    <option value="Английский с элементами делового и&amp;nbsp;профессионального общения">Английский с элементами делового и&nbsp;профессионального общения"</option>
-                    <option value="Переводчик в сфере профессиональной коммуникации">Переводчик в сфере профессиональной коммуникации</option>
-                    <option value="Конференц-перевод">Конференц-перевод</option>
-                    <option value="Синхронный перевод">Синхронный перевод</option>
-                    <option value="Гид-переводчик">Гид-переводчик</option>
-                  </select>
-                </div>
-                <div class="checkbox text-left mt-4">
+                <button class="btn btn_default mt-3" type="submit">Получить результаты</button>
+                <div class="form__agree checkbox text-left mt-2">
                   <input class="checkbox__input" id="emailCheck" type="checkbox" name="agree[]" checked="true"/>
                   <label class="checkbox__label" for="emailCheck">Cогласен получать информационную рассылку от Петербургской школы перевода и&nbsp;иностранных языков</label>
                 </div>
-                <p class="form-confidence small mt-2">Вы будете получать актуальную информацию о старте групп, открытии новых программ, лекциях и&nbsp;мастер-классах</p>
-                <div class="form-group" style="display:none">
-                  <textarea class="form-control" id="testResult" name="testResult" value=""></textarea><span class="form-validation error_testResult"></span>
-                </div>
-                <button class="btn btn_default" type="submit">Отправить</button>
-                <p class="form-confidence small mt-3 mb-4">Поля, помеченные *, обязательны для заполнения. Отправляя форму, Вы соглашаетесь с&nbsp;обработкой персональных данных. Результат тестирования будет отправлен Вам на адрес электронной почты.</p>
+                <p class="form__confidence small mt-1">
+                  Вы будете получать актуальную информацию о старте групп, открытии новых программ, лекциях и&nbsp;мастер-классах. Поля, помеченные *, обязательны для заполнения. Отправляя форму, Вы соглашаетесь с&nbsp;обработкой персональных данных. Результат тестирования будет отправлен Вам на адрес электронной почты.</p>
               </form>
             </div>
-            <p class="test__result" id="result">Ваш результат: 120 баллов. Ваш уровень владения английским языком: А1.                        </p>
+            <div class="test__result" id="result"> </div>
           </div>
           <div class="col-lg-4 col-12">
             <p>Боковая навигация</p>
@@ -109,7 +140,8 @@
         </div>
       </div>
     </section>
-    <script src="./js/jquery.inputmask.js"></script>
+    <script src="./js/jquery.inputmask.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.countdown.js"></script>
     <script src="./js/test-en.js"></script>
     <script src="./js/app.min.js"></script>

@@ -1,8 +1,9 @@
 .btn_action{
-    // background: $bg-secondary;
+    background: $red;
     color: $white;
+    filter: drop-shadow(0px 4px 0px darken($color: $red, $amount: 10));
     &:hover, &:focus{
-        // background: lighten($color: $bg-secondary, $amount: 4);
+        background: darken($color: $red, $amount: 5);
         color: $white;
     }
 }

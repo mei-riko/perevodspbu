@@ -1,7 +1,8 @@
 .input{
     background-color: inherit;
-    color: $white;
+    color: $gray-600;
     border: 1px solid $border-color;
+    border-radius: 4px;
     padding: $spacer/3 $spacer/2;
     margin-bottom: $spacer/3;
     transition: .4s;
@@ -16,6 +17,9 @@
     }
     &:focus::placeholder{
         opacity: 0;
+    }
+    &:last-child{
+        margin-bottom: 0;
     }
     // Состояние
     &--full{

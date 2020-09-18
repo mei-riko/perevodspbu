@@ -22,86 +22,122 @@ html(lang="ru")
             .content
                 .row
                     .col-lg-8.col-12.test
-                        h1 Тестирование по английскому языку
-                        p Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.
-                        button.btn.btn_action#startButton Начать тестирование
+                        h1.mb-3 Тестирование по английскому языку
+                        .test__welcome
+                            p Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.
+                            button.btn.btn_action#startButton Начать тестирование
                         .test__content#contentTest
-                            .text__alert.text-bold.mb-4 До завершения тестирования осталось: 
-                                span#timer(style="color: #2e62de;")
-                            //- Question 1-10
-                            .card.test__card
-                                .card-header#heading1
-                                    a(data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1") Вопросы 1-10
-                                .collapse#collapse1(aria-labelledby="heading1" data-parent="#accordionQuestion")
-                                    .card-body
-                                        .question.question1.mb-3
-                                        p.question__title.h5 1. Water 
-                                            span.z.text-bold(style="display:inline;") ...
-                                            span.1a.text-bold(style="display:none;") is to boil
-                                            span.1b.text-bold(style="display:none;") is boiling
-                                            span.1c.text-bold(style="display:none;") boils
-                                            | at 100 degrees Celsius.
-                                        .custom-control.custom-radio.custom-control-inline
-                                            input.custom-control-input.answer-input(type="radio" id="1a" name="question1" value="a")
-                                            label.custom-control-label(for="1a") is to boil
-                                        .custom-control.custom-radio.custom-control-inline
-                                            input.custom-control-input.answer-input(type="radio" id="1b" name="question1" value="b")
-                                            label.custom-control-label(for="1b") is boiling
-                                        .custom-control.custom-radio.custom-control-inline
-                                            input.custom-control-input.answer-input(type="radio" id="1c" name="question1" value="c")
-                                            label.custom-control-label(for="1c") boils
+                            .test__alert.mb-2 До завершения тестирования осталось: 
+                                span#timer.text-bold.text-red
+                            .accordion.mb-3#accordionQuestion
+                                //- Question 1
+                                .card.test__card
+                                    .card__header#heading1
+                                        a.card__title(data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1") Вопросы 1-10
+                                    .collapse.show#collapse1(aria-labelledby="heading1" data-parent="#accordionQuestion")
+                                        .card__body
+                                            .question.question1
+                                                p.question__title.h5 1. Water 
+                                                    span.z.question__answer(style="display:inline;") ... 
+                                                    span.1a.question__answer(style="display:none;") is to boil 
+                                                    span.1b.question__answer(style="display:none;") is boiling 
+                                                    span.1c.question__answer(style="display:none;") boils 
+                                                    | at 100 degrees Celsius.
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1a" name="question1" value="a")
+                                                    label.custom-control-label(for="1a") is to boil
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1b" name="question1" value="b")
+                                                    label.custom-control-label(for="1b") is boiling
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1c" name="question1" value="c")
+                                                    label.custom-control-label(for="1c") boils
+                                .card.test__card
+                                    .card__header#heading2
+                                        a.card__title(data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2") Вопросы 11-20
+                                    .collapse#collapse2(aria-labelledby="heading2" data-parent="#accordionQuestion")
+                                        .card__body
+                                            .question.question11.mb-3
+                                                p.question__title.h5 11. Water 
+                                                    span.z.text-bold(style="display:inline;") ...
+                                                    span.1a.text-bold(style="display:none;") is to boil
+                                                    span.1b.text-bold(style="display:none;") is boiling
+                                                    span.1c.text-bold(style="display:none;") boils
+                                                    | at 100 degrees Celsius.
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1a" name="question11" value="a")
+                                                    label.custom-control-label(for="1a") is to boil
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1b" name="question11" value="b")
+                                                    label.custom-control-label(for="1b") is boiling
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1c" name="question11" value="c")
+                                                    label.custom-control-label(for="1c") boils
                             button.btn.btn_action#endButton Завершить тестирование
                         .test__form#beforeResult
                             p Укажите свои контактные данные для получения результата тестирования. Баллы покажем сразу, а готовый к распечатке файл отправим на почту.
-                            form.form.ajax_form(name="formTest" method="post" action="test-level")
+                            form.form.ajax_form(name="formTest" method="post" action="")
+                                .d-none
+                                    input.input.input--full(data-type="result" type="text" name="testResult" value="")
+                                    input.input.input--full(data-type="recommendation" type="text" name="recommendation" value="")
+                                    input.input.input--full(data-type="level" type="text" name="level" value="")
                                 .form-group
-                                    p.small.text-bold Укажите Ваши ФИО 
+                                    p.form__label Укажите Ваши ФИО 
                                         sup *
-                                    input.form-control.form-control-has-validation(type="text" id="name" name="name" value="")
-                                    span.form-validation.error_name Укажите ваши ФИО
-                                    .small.mt-2 Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.
-                                .form-row
-                                    .col-12.col-md-6.mb-4.mb-md-0
-                                        p.small.text-bold Введите своей e-mail 
-                                            sup *
-                                        input.form-control.form-control-has-validation(type="email" id="email" name="email" value="")
-                                        span.form-validation.error_email
+                                    input.input.input--full.error(type="text" id="name" name="name" value="")
+                                    span.form__validation.error.error_name Укажите ваши ФИО
+                                    .small Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.
+                                .form__row.row.mt-3
                                     .col-12.col-md-6
-                                        p.small.text-bold Контактный телефон 
+                                        p.form__label Введите своей e-mail 
                                             sup *
-                                        input.phone.form-control.form-control-has-validation(type="tel" id="phone" name="phone" value="")
-                                .form-group.mt-4
-                                    p.small.text-bold Какое у вас образование?
-                                    select#selectEducation.form-control(name="education")
-                                        option(value="высшее") высшее
-                                        option(value="неоконченное высшее (студент)") неоконченное высшее (студент)
-                                        option(value="среднее специальное") среднее специальное
-                                        option(value="среднее") среднее
-                                        option(value="другое") другое
-                                .form-group.mt-4
-                                    p.small.text-bold Выберите программу обучения:
-                                    select#select.form-control(name="programm")
-                                        option(value="Выберите программу...") 
-                                        option(value="Английский язык для преподавателей специальных дисциплин в&nbsp;вузах") Английский язык для преподавателей специальных дисциплин в&nbsp;вузах
-                                        option(value="Английский с элементами делового и&nbsp;профессионального общения") Английский с элементами делового и&nbsp;профессионального общения"
-                                        option(value="Переводчик в сфере профессиональной коммуникации") Переводчик в сфере профессиональной коммуникации
-                                        option(value="Конференц-перевод") Конференц-перевод
-                                        option(value="Синхронный перевод") Синхронный перевод
-                                        option(value="Гид-переводчик") Гид-переводчик
-                                .checkbox.text-left.mt-4
+                                        input.input.input--full(type="email" id="email" name="email" value="")
+                                        span.form__validation.error_email
+                                    .col-12.col-md-6
+                                        p.form__label Контактный телефон 
+                                            sup *
+                                        input.input.input--full.phone(type="tel" id="phone" name="phone" value="7")
+                                        span.form__validation.error_phone
+                                .form__row.row.mt-3
+                                    .col-12.col-md-6.mb-1
+                                        p.form__label Какое у вас образование?
+                                        select#selectEducation.input.input--full(name="education")
+                                            option(value="высшее") высшее
+                                            option(value="неоконченное высшее (студент)") неоконченное высшее (студент)
+                                            option(value="среднее специальное") среднее специальное
+                                            option(value="среднее") среднее
+                                            option(value="другое") другое
+                                    .col-12.col-md-6.mb-1
+                                        p.form__label Выберите программу обучения:
+                                        select#select.input.input--full(name="programm")
+                                            option(value="Выберите программу...") Выберите программу... 
+                                            option(value="Английский язык для преподавателей специальных дисциплин в&nbsp;вузах") Английский язык для преподавателей специальных дисциплин в&nbsp;вузах
+                                            option(value="Английский с элементами делового и&nbsp;профессионального общения") Английский с элементами делового и&nbsp;профессионального общения"
+                                            option(value="Переводчик в сфере профессиональной коммуникации") Переводчик в сфере профессиональной коммуникации
+                                            option(value="Конференц-перевод") Конференц-перевод
+                                            option(value="Синхронный перевод") Синхронный перевод
+                                            option(value="Гид-переводчик") Гид-переводчик
+                                button.btn.btn_default.mt-3(type="submit") Получить результаты
+                                .form__agree.checkbox.text-left.mt-2
                                     input.checkbox__input#emailCheck(type="checkbox" name="agree[]" checked="true")
                                     label.checkbox__label(for="emailCheck") Cогласен получать информационную рассылку от Петербургской школы перевода и&nbsp;иностранных языков
-                                p.form-confidence.small.mt-2 Вы будете получать актуальную информацию о старте групп, открытии новых программ, лекциях и&nbsp;мастер-классах
-                                div.form-group(style="display:none")
-                                    textarea.form-control#testResult(name="testResult" value="")
-                                    span.form-validation.error_testResult
-                                button.btn.btn_default(type="submit") Отправить
-                                p.form-confidence.small.mt-3.mb-4 Поля, помеченные *, обязательны для заполнения. Отправляя форму, Вы соглашаетесь с&nbsp;обработкой персональных данных. Результат тестирования будет отправлен Вам на адрес электронной почты.
-                        p.test__result#result Ваш результат: 120 баллов. Ваш уровень владения английским языком: А1.                        
+                                p.form__confidence.small.mt-1 Вы будете получать актуальную информацию о старте групп, открытии новых программ, лекциях и&nbsp;мастер-классах. 
+                                    | Поля, помеченные *, обязательны для заполнения. Отправляя форму, Вы соглашаетесь с&nbsp;обработкой персональных данных. Результат тестирования будет отправлен Вам на адрес электронной почты.
+                        .test__result#result 
+                            //- .test__result-line
+                            //-     span.test__result-val(data-result="sum") 120 
+                            //-     span.test__result-title набрано баллов
+                            //- .test__result-line
+                            //-     span.test__result-val(data-result="level") Upper-Intermediate
+                            //-     span.test__result-title уровень владения английским языком
+                            //- .test__result-info Результат тестирования будет отправлен Вам на e-mail
                     .col-lg-4.col-12
                         p Боковая навигация
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/jquery.fancybox.min.js")
+
         script(src="./js/jquery.countdown.js")
         script(src="./js/test-en.js")
+        
         script(src="./js/app.min.js")

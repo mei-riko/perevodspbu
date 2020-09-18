@@ -1,0 +1,40 @@
+.test{
+    &__alert{
+        padding: $spacer/3 $spacer/2;
+        background-color: $gray-100;
+    }
+    &__content{
+        display: none;
+    }
+    &__form{
+        display: none;
+    }
+    &__result{
+        display: none;
+        // display: inline-block;
+
+        padding: $spacer;
+        background-color: $gray-200;
+        color: $gray-800;
+
+        &-val{
+            display: inline-block;
+            width: 160px;
+
+            font-size: 14px;
+            text-align: right;
+            margin-right: $spacer;
+        }
+        &-title{
+            font-size: 14px;
+            // color: $gray-600;
+        }
+        &-info{
+            border-top: 1px solid $gray-400;
+            margin-top: $spacer/3;
+            padding-top: $spacer/3;
+            font-size: 12px;
+            color: $gray-600;
+        }
+    }
+}
