@@ -1,0 +1,188 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Тестирование Испаский
+
+        link(href="https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans:300,400,700,800&display=swap&subset=cyrillic" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        section.container
+            .content-breadcrumbs
+                ul.breadcrumbs
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href="/index.html") Главная
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href="/catalog.html") Тестирование online
+                    li.breadcrumbs__item.breadcrumbs__item--active Тестирование по испанскому языку
+            .content
+                .row
+                    .col-lg-8.col-12.test
+                        h1.mb-3 Тестирование по испанскому языку
+                        .test__welcome
+                            p Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.
+                            button.btn.btn_action#startButton Начать тестирование
+                        .test__content#contentTest
+                            .test__alert.mb-2 До завершения тестирования осталось: 
+                                span#timer.text-bold.text-red
+                            .accordion.mb-3#accordionQuestion
+                                //- Question 1
+                                .card.test__card
+                                    .card__header#heading1
+                                        a.card__title(data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1") Вопросы 1-10
+                                    .collapse.show#collapse1(aria-labelledby="heading1" data-parent="#accordionQuestion")
+                                        .card__body
+                                            .question.question1.mb-3
+                                                p.question__title.h5 1. Water 
+                                                    span.z.question__answer(style="display:inline;") ... 
+                                                    span.1a.question__answer(style="display:none;") is to boil 
+                                                    span.1b.question__answer(style="display:none;") is boiling 
+                                                    span.1c.question__answer(style="display:none;") boils 
+                                                    | at 100 degrees Celsius.
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1a" name="question1" value="a")
+                                                    label.custom-control-label(for="1a") is to boil
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1b" name="question1" value="b")
+                                                    label.custom-control-label(for="1b") is boiling
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1c" name="question1" value="c")
+                                                    label.custom-control-label(for="1c") boils
+                                            .question.question2
+                                                p.question__title.h5 2. En cuanto 
+                                                    span.z.question__answer(style="display:inline;") ... 
+                                                    span.2a.question__answer(style="display:none;") 1-1 
+                                                    span.2b.question__answer(style="display:none;") 1-2 
+                                                    span.2c.question__answer(style="display:none;") 1-3 
+                                                    | el texto, me 
+                                                    span.z.question__answer(style="display:inline;") ... 
+                                                    span.2a.question__answer(style="display:none;") 2-1
+                                                    span.2b.question__answer(style="display:none;") 2-2 
+                                                    span.2c.question__answer(style="display:none;") 2-3 
+                                                    | en seguida. 
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="2a" name="question2" value="a")
+                                                    label.custom-control-label(for="2a") 1-1/2-1
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="2b" name="question2" value="b")
+                                                    label.custom-control-label(for="2b") 1-2/2-2
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="2c" name="question2" value="c")
+                                                    label.custom-control-label(for="2c") 1-3/2-3
+                                .card.test__card
+                                    .card__header#heading2
+                                        a.card__title(data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2") Вопросы 11-20
+                                    .collapse#collapse2(aria-labelledby="heading2" data-parent="#accordionQuestion")
+                                        .card__body
+                                            .question.question11.mb-3
+                                                p.question__title.h5 11. Water 
+                                                    span.z.text-bold(style="display:inline;") ...
+                                                    span.1a.text-bold(style="display:none;") is to boil
+                                                    span.1b.text-bold(style="display:none;") is boiling
+                                                    span.1c.text-bold(style="display:none;") boils
+                                                    | at 100 degrees Celsius.
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1a" name="question11" value="a")
+                                                    label.custom-control-label(for="1a") is to boil
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1b" name="question11" value="b")
+                                                    label.custom-control-label(for="1b") is boiling
+                                                .custom-control.custom-radio.custom-control-inline
+                                                    input.custom-control-input.answer-input(type="radio" id="1c" name="question11" value="c")
+                                                    label.custom-control-label(for="1c") boils
+                            button.btn.btn_action#endButton Завершить тестирование
+                        .test__form#beforeResult
+                            p Укажите свои контактные данные для получения результата тестирования. Баллы покажем сразу, а готовый к распечатке файл отправим на почту.
+                            form.form.ajax_form(name="formTest" method="post" action="")
+                                .d-none
+                                    input.input.input--full(data-type="result" type="text" name="testResult" value="")
+                                    input.input.input--full(data-type="recommendation" type="text" name="recommendation" value="")
+                                    input.input.input--full(data-type="level" type="text" name="level" value="")
+                                .form-group
+                                    p.form__label Укажите Ваши ФИО 
+                                        sup *
+                                    input.input.input--full.error(type="text" id="name" name="name" value="")
+                                    span.form__validation.error.error_name Укажите ваши ФИО
+                                    .small Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.
+                                .form__row.row.mt-3
+                                    .col-12.col-md-6
+                                        p.form__label Введите своей e-mail 
+                                            sup *
+                                        input.input.input--full(type="email" id="email" name="email" value="")
+                                        span.form__validation.error_email
+                                    .col-12.col-md-6
+                                        p.form__label Контактный телефон 
+                                            sup *
+                                        input.input.input--full.phone(type="tel" id="phone" name="phone" value="7")
+                                        span.form__validation.error_phone
+                                .form__row.row.mt-3
+                                    .col-12.col-md-6.mb-1
+                                        p.form__label Какое у вас образование?
+                                        select#selectEducation.input.input--full(name="education")
+                                            option(value="высшее") высшее
+                                            option(value="неоконченное высшее (студент)") неоконченное высшее (студент)
+                                            option(value="среднее специальное") среднее специальное
+                                            option(value="среднее") среднее
+                                            option(value="другое") другое
+                                    .col-12.col-md-6.mb-1
+                                        p.form__label Выберите программу обучения:
+                                        select#select.input.input--full(name="programm")
+                                            option(value="Выберите программу...") Выберите программу... 
+                                            option(value="Английский язык для преподавателей специальных дисциплин в&nbsp;вузах") Английский язык для преподавателей специальных дисциплин в&nbsp;вузах
+                                            option(value="Английский с элементами делового и&nbsp;профессионального общения") Английский с элементами делового и&nbsp;профессионального общения"
+                                            option(value="Переводчик в сфере профессиональной коммуникации") Переводчик в сфере профессиональной коммуникации
+                                            option(value="Конференц-перевод") Конференц-перевод
+                                            option(value="Синхронный перевод") Синхронный перевод
+                                            option(value="Гид-переводчик") Гид-переводчик
+                                button.btn.btn_default.mt-3(type="submit") Получить результаты
+                                .form__agree.checkbox.text-left.mt-2
+                                    input.checkbox__input#emailCheck(type="checkbox" name="agree[]" checked="true")
+                                    label.checkbox__label(for="emailCheck") Cогласен получать информационную рассылку от Петербургской школы перевода и&nbsp;иностранных языков
+                                p.form__confidence.small.mt-1 Вы будете получать актуальную информацию о старте групп, открытии новых программ, лекциях и&nbsp;мастер-классах. 
+                                    | Поля, помеченные *, обязательны для заполнения. Отправляя форму, Вы соглашаетесь с&nbsp;обработкой персональных данных. Результат тестирования будет отправлен Вам на адрес электронной почты.
+                        .test__result#result 
+                            p Благодарим за обращение в Школу перевода и иностранных языков СПбГУ! Результат тестирования направлен на указанный Вами адрес электронной почты.
+                            //- .test__result-line
+                            //-     span.test__result-val(data-result="sum") 120 
+                            //-     span.test__result-title набрано баллов
+                            //- .test__result-line
+                            //-     span.test__result-val(data-result="level") Upper-Intermediate
+                            //-     span.test__result-title уровень владения английским языком
+                            //- .test__result-info Результат тестирования будет отправлен Вам на e-mail
+                    .col-lg-4.col-12
+                        .content-sidebar
+                            .content-sidebar__item.card
+                                a.card__title(data-toggle="collapse" data-target="#nav1" aria-expanded="false" aria-controls="nav1") Программы обучения
+                                .collapse#nav1
+                                    nav.card__body
+                                        a.content-sidebar__parent-link(href="#") Школа перевода
+                                        a.content-sidebar__child-link(href="#") Переводчик в сфере профессиональной коммуникации
+                                        a.content-sidebar__child-link(href="#") Конференц-перевод
+                                        a.content-sidebar__child-link(href="#") Синхронный перевод
+                                        a.content-sidebar__parent-link(href="#") Школа гидов-переводчиков
+                                        a.content-sidebar__child-link(href="#") Гид-переводчик
+                                        a.content-sidebar__link(href="#") Лекции, семинары, мастер-классы
+                            .content-sidebar__item.card
+                                a.card__title(data-toggle="collapse" data-target="#nav2" aria-expanded="false" aria-controls="nav2") Актуальные новости
+                                .collapse#nav2
+                                    nav.card__body
+                                        a.content-sidebar__link(href="#") Начало нового семестра для продолжающих обучение
+                                        a.content-sidebar__link(href="#") Старт группы "Синхронный перевод"
+                                        a.content-sidebar__link(href="#") Фонетический курс
+                                        a.content-sidebar__link(href="#") Летние интенсивные курсы
+                                        a.content-sidebar__link(href="#") Форма связи на время карантина!
+                                        a.content-sidebar__link(href="#") Группа В2 дистанционный формат обучения
+                                        a.content-sidebar__link(href="#") Стоп карантин
+                                        a.content-sidebar__link(href="#") Старт групп уровней В1 и В2
+        include chunks/footer.pug
+        script(src="./js/jquery.inputmask.min.js")
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/jquery.countdown.js")
+        script(src="./js/test-en.js")
+        
+        script(src="./js/app.min.js")

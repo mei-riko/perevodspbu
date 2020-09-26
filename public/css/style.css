@@ -6532,3 +6532,45 @@ table td {
   background-color: #f8f9fa;
   font-size: 12px;
 }
+
+.content-sidebar {
+  background: #f8f9fa;
+}
+
+.content-sidebar__parent-link {
+  width: 100%;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.content-sidebar__child-link {
+  width: 100%;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  margin-left: 15px;
+}
+
+.content-sidebar__child-link + .content-sidebar__link,
+.content-sidebar__child-link + .content-sidebar__parent-link {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #dee2e6;
+}
+
+.content-sidebar__link {
+  color: #000;
+  line-height: 1.2;
+  width: 100%;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.content-sidebar__link:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}

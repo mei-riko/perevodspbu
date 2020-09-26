@@ -1,0 +1,38 @@
+.content-sidebar{
+    background: $gray-100;
+    &__parent-link{
+        width: 100%;
+        color: $black;
+        font-weight: $font-weight-bold;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+    &__child-link{
+        width: 100%;
+        color: $black;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        margin-left: $spacer/2;
+
+        & + .content-sidebar__link,
+        & + .content-sidebar__parent-link{
+            margin-top: 8px;
+            padding-top: 16px;
+            border-top: 1px solid $border-color;
+        }
+    }
+    &__link{
+        color: $black;
+        line-height: 1.2;
+        width: 100%;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $border-color;
+
+        &:last-child{
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+}

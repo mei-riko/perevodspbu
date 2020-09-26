@@ -1,0 +1,177 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Тестирование Испаский</title>
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans:300,400,700,800&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <section class="container">
+      <div class="content-breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/index.html">Главная</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/catalog.html">Тестирование online</a></li>
+          <li class="breadcrumbs__item breadcrumbs__item--active">Тестирование по испанскому языку</li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-lg-8 col-12 test">
+            <h1 class="mb-3">Тестирование по испанскому языку</h1>
+            <div class="test__welcome">
+              <p>Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.</p>
+              <button class="btn btn_action" id="startButton">Начать тестирование</button>
+            </div>
+            <div class="test__content" id="contentTest">
+              <div class="test__alert mb-2">До завершения тестирования осталось: <span class="text-bold text-red" id="timer"></span></div>
+              <div class="accordion mb-3" id="accordionQuestion">
+                <div class="card test__card">
+                  <div class="card__header" id="heading1"><a class="card__title" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Вопросы 1-10</a></div>
+                  <div class="collapse show" id="collapse1" aria-labelledby="heading1" data-parent="#accordionQuestion">
+                    <div class="card__body">
+                      <div class="question question1 mb-3">
+                        <p class="question__title h5">1. Water <span class="z question__answer" style="display:inline;">... </span><span class="1a question__answer" style="display:none;">is to boil </span><span class="1b question__answer" style="display:none;">is boiling </span><span class="1c question__answer" style="display:none;">boils </span>at 100 degrees Celsius.</p>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1a" name="question1" value="a"/>
+                          <label class="custom-control-label" for="1a">is to boil</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1b" name="question1" value="b"/>
+                          <label class="custom-control-label" for="1b">is boiling</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1c" name="question1" value="c"/>
+                          <label class="custom-control-label" for="1c">boils</label>
+                        </div>
+                      </div>
+                      <div class="question question2">
+                        <p class="question__title h5">2. En cuanto <span class="z question__answer" style="display:inline;">... </span><span class="2a question__answer" style="display:none;">1-1 </span><span class="2b question__answer" style="display:none;">1-2 </span><span class="2c question__answer" style="display:none;">1-3 </span>el texto, me <span class="z question__answer" style="display:inline;">... </span><span class="2a question__answer" style="display:none;">2-1</span><span class="2b question__answer" style="display:none;">2-2 </span><span class="2c question__answer" style="display:none;">2-3 </span>en seguida. </p>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="2a" name="question2" value="a"/>
+                          <label class="custom-control-label" for="2a">1-1/2-1</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="2b" name="question2" value="b"/>
+                          <label class="custom-control-label" for="2b">1-2/2-2</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="2c" name="question2" value="c"/>
+                          <label class="custom-control-label" for="2c">1-3/2-3</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card test__card">
+                  <div class="card__header" id="heading2"><a class="card__title" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Вопросы 11-20</a></div>
+                  <div class="collapse" id="collapse2" aria-labelledby="heading2" data-parent="#accordionQuestion">
+                    <div class="card__body">
+                      <div class="question question11 mb-3">
+                        <p class="question__title h5">11. Water <span class="z text-bold" style="display:inline;">...</span><span class="1a text-bold" style="display:none;">is to boil</span><span class="1b text-bold" style="display:none;">is boiling</span><span class="1c text-bold" style="display:none;">boils</span>at 100 degrees Celsius.</p>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1a" name="question11" value="a"/>
+                          <label class="custom-control-label" for="1a">is to boil</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1b" name="question11" value="b"/>
+                          <label class="custom-control-label" for="1b">is boiling</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input answer-input" type="radio" id="1c" name="question11" value="c"/>
+                          <label class="custom-control-label" for="1c">boils</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn_action" id="endButton">Завершить тестирование</button>
+            </div>
+            <div class="test__form" id="beforeResult">
+              <p>Укажите свои контактные данные для получения результата тестирования. Баллы покажем сразу, а готовый к распечатке файл отправим на почту.</p>
+              <form class="form ajax_form" name="formTest" method="post" action="">
+                <div class="d-none">
+                  <input class="input input--full" data-type="result" type="text" name="testResult" value=""/>
+                  <input class="input input--full" data-type="recommendation" type="text" name="recommendation" value=""/>
+                  <input class="input input--full" data-type="level" type="text" name="level" value=""/>
+                </div>
+                <div class="form-group">
+                  <p class="form__label">Укажите Ваши ФИО <sup>*</sup></p>
+                  <input class="input input--full error" type="text" id="name" name="name" value=""/><span class="form__validation error error_name">Укажите ваши ФИО</span>
+                  <div class="small">Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.</div>
+                </div>
+                <div class="form__row row mt-3">
+                  <div class="col-12 col-md-6">
+                    <p class="form__label">Введите своей e-mail <sup>*</sup></p>
+                    <input class="input input--full" type="email" id="email" name="email" value=""/><span class="form__validation error_email"></span>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <p class="form__label">Контактный телефон <sup>*</sup></p>
+                    <input class="input input--full phone" type="tel" id="phone" name="phone" value="7"/><span class="form__validation error_phone"></span>
+                  </div>
+                </div>
+                <div class="form__row row mt-3">
+                  <div class="col-12 col-md-6 mb-1">
+                    <p class="form__label">Какое у вас образование?</p>
+                    <select class="input input--full" id="selectEducation" name="education">
+                      <option value="высшее">высшее</option>
+                      <option value="неоконченное высшее (студент)">неоконченное высшее (студент)</option>
+                      <option value="среднее специальное">среднее специальное</option>
+                      <option value="среднее">среднее</option>
+                      <option value="другое">другое</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-6 mb-1">
+                    <p class="form__label">Выберите программу обучения:</p>
+                    <select class="input input--full" id="select" name="programm">
+                      <option value="Выберите программу...">Выберите программу... </option>
+                      <option value="Английский язык для преподавателей специальных дисциплин в&amp;nbsp;вузах">Английский язык для преподавателей специальных дисциплин в&nbsp;вузах</option>
+                      <option value="Английский с элементами делового и&amp;nbsp;профессионального общения">Английский с элементами делового и&nbsp;профессионального общения"</option>
+                      <option value="Переводчик в сфере профессиональной коммуникации">Переводчик в сфере профессиональной коммуникации</option>
+                      <option value="Конференц-перевод">Конференц-перевод</option>
+                      <option value="Синхронный перевод">Синхронный перевод</option>
+                      <option value="Гид-переводчик">Гид-переводчик</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="btn btn_default mt-3" type="submit">Получить результаты</button>
+                <div class="form__agree checkbox text-left mt-2">
+                  <input class="checkbox__input" id="emailCheck" type="checkbox" name="agree[]" checked="true"/>
+                  <label class="checkbox__label" for="emailCheck">Cогласен получать информационную рассылку от Петербургской школы перевода и&nbsp;иностранных языков</label>
+                </div>
+                <p class="form__confidence small mt-1">
+                  Вы будете получать актуальную информацию о старте групп, открытии новых программ, лекциях и&nbsp;мастер-классах. Поля, помеченные *, обязательны для заполнения. Отправляя форму, Вы соглашаетесь с&nbsp;обработкой персональных данных. Результат тестирования будет отправлен Вам на адрес электронной почты.</p>
+              </form>
+            </div>
+            <div class="test__result" id="result"> 
+              <p>Благодарим за обращение в Школу перевода и иностранных языков СПбГУ! Результат тестирования направлен на указанный Вами адрес электронной почты.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="content-sidebar">
+              <div class="content-sidebar__item card"><a class="card__title" data-toggle="collapse" data-target="#nav1" aria-expanded="false" aria-controls="nav1">Программы обучения</a>
+                <div class="collapse" id="nav1">
+                  <nav class="card__body"><a class="content-sidebar__parent-link" href="#">Школа перевода</a><a class="content-sidebar__child-link" href="#">Переводчик в сфере профессиональной коммуникации</a><a class="content-sidebar__child-link" href="#">Конференц-перевод</a><a class="content-sidebar__child-link" href="#">Синхронный перевод</a><a class="content-sidebar__parent-link" href="#">Школа гидов-переводчиков</a><a class="content-sidebar__child-link" href="#">Гид-переводчик</a><a class="content-sidebar__link" href="#">Лекции, семинары, мастер-классы</a></nav>
+                </div>
+              </div>
+              <div class="content-sidebar__item card"><a class="card__title" data-toggle="collapse" data-target="#nav2" aria-expanded="false" aria-controls="nav2">Актуальные новости</a>
+                <div class="collapse" id="nav2">
+                  <nav class="card__body"><a class="content-sidebar__link" href="#">Начало нового семестра для продолжающих обучение</a><a class="content-sidebar__link" href="#">Старт группы "Синхронный перевод"</a><a class="content-sidebar__link" href="#">Фонетический курс</a><a class="content-sidebar__link" href="#">Летние интенсивные курсы</a><a class="content-sidebar__link" href="#">Форма связи на время карантина!</a><a class="content-sidebar__link" href="#">Группа В2 дистанционный формат обучения</a><a class="content-sidebar__link" href="#">Стоп карантин</a><a class="content-sidebar__link" href="#">Старт групп уровней В1 и В2</a></nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/jquery.inputmask.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.countdown.js"></script>
+    <script src="./js/test-en.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>
