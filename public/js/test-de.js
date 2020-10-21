@@ -24,13 +24,13 @@ $(document).ready(function() {
     }
     function resultTest(){
         let answer=[];
-        let answerDefault=["b", "a", "c", "b", "a", "a", "a", "b", "c", "b", "c", "b", "c", "a", "c", "a", "b", "b", "a", "a", "b", "b", "a", "b", "b", "b", "c", "a", "a", "a", "b", "a", "b", "c", "a", "a", "b", "b", "b", "b", "c", "a", "b", "c", "b", "a", "b", "b", "b", "b", "b", "b", "a", "c", "b", "c", "c", "c", "c", "b", "b", "c", "c", "a", "b", "c", "b", "b", "a", "b", "c", "a", "a", "c", "b", "b", "b", "a", "b", "b", "b", "b", "a", "a", "c", "c", "b", "a", "a", "b", "b", "b", "c", "b", "c", "c", "c", "c", "b", "b"];
+        let answerDefault=["c", "c", "b", "c", "a", "b", "b", "b", "c", "b", "b", "c", "b", "b", "c", "b", "a", "c", "c", "c", "a", "c", "b", "b", "c", "a", "b", "b", "a", "c", "b", "a", "c", "c", "b", "c", "a", "c", "c", "c", "c", "b", "c", "a", "c", "b", "c", "c", "a", "a", "c", "a", "c", "b", "b", "b", "b", "c", "c", "c", "b", "a", "a", "b", "a", "b", "b", "b", "a", "c"];
         let index,
             indexDefault;
         let sum=0;
         let level = '';
         let recommendation = '';
-        for (indexDefault = 0; indexDefault < 100; ++indexDefault) {
+        for (indexDefault = 0; indexDefault < 70; ++indexDefault) {
             index=indexDefault+1;
             var inputAnswer = $(".question" + index + " .custom-control input:checked");
             if(inputAnswer.length === 0){
@@ -44,29 +44,29 @@ $(document).ready(function() {
             }
             //console.log(index + ' ' + answerDefault[indexDefault] + ' ' + answer[index] + ' ' + sum);
         }
-        if (sum >= 0 && sum <11){
-            level='A1/Starter';
-            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного испанского языка. Модуль A1»</li>';
+        if (sum >= 0 && sum <16){
+            level='A1';
+            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного немецкого языка. Модуль A1»</li>';
         }
-        if (sum >= 11 && sum <31){
-            level='A2.1/Elementary';
-            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного испанского языка. Модуль A2.1»</li>';
+        if (sum >= 16 && sum <31){
+            level='A2.1';
+            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного немецкого языка. Модуль A2.1»</li>';
         }
-        if (sum >= 31 && sum <50){
-            level='A2.2/Pre-Intermediate';
-            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного испанского языка. Модуль A2.2»</li>';
+        if (sum >= 31 && sum <46){
+            level='A2.2';
+            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного немецкого языка. Модуль A2.2»</li>';
         }
-        if (sum >= 50 && sum <70){
-            level='B1/Intermediate';
-            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного испанского языка. Модуль B1»</li>';
+        if (sum >= 46 && sum <61){
+            level='B1';
+            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного немецкого языка. Модуль B1»)</li>';
         }
-        if (sum >= 70 && sum <90){
-            level='B2/Upper-Intermediate';
-            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного испанского языка. Модуль B2».</li><li><strong>Школа перевода:</strong>  <br/>«Переводчик в сфере профессиональной коммуникации (Профиль 3)», </br>«Синхронный перевод и межкультурная коммуникация».</li><li><strong>Школа гидов-переводчиков:</strong>  <br/>«Переводчик в сфере профессиональной коммуникации: «Гид-переводчик».</li>';
+        if (sum >= 61  && sum <70){
+            level='B2';
+            recommendation='<li><strong>Курсы иностранных языков:</strong><br/>«Курс разговорного немецкого языка. Модуль B2»</li><li><strong>Школа перевода:</strong><br/>«Переводчик в сфере профессиональной коммуникации (Профиль 3)», <br/>«Синхронный перевод и межкультурная коммуникация».</li><li><strong>Школа гидов-переводчиков:</strong> <br/>«Переводчик в сфере профессиональной коммуникации («Гид-переводчик»)»</li>';
         }
-        if (sum >= 90){
-            level='C1/Advanced';
-            recommendation='<li><strong>Курсы иностранных языков:</strong> <br/>«Курс разговорного испанского языка. Модуль C1».<li><strong>Школа перевода:</strong>  <br/>«Переводчик в сфере профессиональной коммуникации (Профиль 3)», «Синхронный перевод и межкультурная коммуникация».<li><strong>Школа гидов-переводчиков:</strong>  <br/>«Переводчик в сфере профессиональной коммуникации «Гид-переводчик»»</li>';
+		if (sum == 70){
+            level='С1 (требуется собеседование с преподавателем)';
+            recommendation='<li><strong>Курсы иностранных языков:</strong><br/>«Курс разговорного немецкого языка. Модуль С1»</li><li><strong>Школа перевода:</strong><br/>«Переводчик в сфере профессиональной коммуникации (Профиль 3)», <br/>«Синхронный перевод и межкультурная коммуникация».</li><li><strong>Школа гидов-переводчиков:</strong> <br/>«Переводчик в сфере профессиональной коммуникации («Гид-переводчик»)»</li>';
         }
         // Вписать в форму
         $(".test .test__form .form .input[data-type=result]").val(sum);
