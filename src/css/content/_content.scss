@@ -1,5 +1,21 @@
 .content{
     background-color: $white;
-    @extend .py-3;
-    @extend .px-4;
+    // @extend .py-3;
+    @extend .p-2;
+
+    p{
+        line-height: $line-height-base;
+    }
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: sm)) {
+    .content{
+        @extend .p-sm-3;
+    }
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: md)) {
+    .content{
+        @extend .p-md-4;
+    }
 }

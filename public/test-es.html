@@ -21,7 +21,7 @@
       <div class="content">
         <div class="row">
           <div class="col-lg-8 col-12 test">
-            <h1 class="mb-3">Тестирование по испанскому языку</h1>
+            <h1 class="mb-2">Тестирование по испанскому языку</h1>
             <div class="test__welcome">
               <p>Вы сможете распечатать на принтере результат тестирования, подписанный вашим именем. С этой бумагой вы можете прийти на наши курсы, и вам не придется проходить тест в учебной аудитории.</p>
               <button class="btn btn_action" id="startButton">Начать тестирование</button>
@@ -168,7 +168,99 @@
         </div>
       </div>
     </section>
+    <div class="container">
+      <footer class="footer">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <p class="footer__title">О центре</p>
+            <ul class="footer__nav">
+              <li><a class="footer__link" href="#">Преподаватели</a></li>
+              <li><a class="footer__link" href="#">О школе</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <p class="footer__title">Поступающим</p>
+            <ul class="footer__nav">
+              <li><a class="footer__link" href="#">Программы обучения</a></li>
+              <li><a class="footer__link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <p class="footer__title">Новости</p>
+            <ul class="footer__nav">
+              <li><a class="footer__link" href="#">Окончание обучения группой Беляевой</a></li>
+              <li><a class="footer__link" href="#">Благодарственное письмо Демидову М.А.</a></li>
+              <li><a class="footer__link" href="#">Сдача экзамена TOLES</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <p class="footer__title">Контактная информация</p>
+            <p class="footer__address">СПб, 6-ая линия В.О., дом 15, 1 этаж, офис 101</p><a class="footer__link text-underline text-bold" data-fancybox="" data-src="#callModal" href="javascript;">Напишите нам</a>
+          </div>
+        </div>
+      </footer>
+      <aside class="footer footer_aside">
+        <div class="row align-items-end">
+          <div class="col-md-6 col-sm-12 mb-2 mb-md-0">
+            <div class="row align-items-center align-items-lg-end">
+              <div class="col-3 col-sm-2 col-md-3 col-lg-2"><img class="img-fluid footer-logo" src="https://www.perevod.spbu.ru/assets/image/sublogo_png.png" alt="САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ" title="САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ"/></div>
+              <div class="col-9 col-sm-10 col-md-9 col-lg-10">
+                <p class="footer__title mb-1">САНКТ-ПЕТЕРБУРГСКИЙ<br> ГОСУДАРСТВЕННЫЙ<br> УНИВЕРСИТЕТ</p>
+                <div class="footer__intro">199034, Россия, Санкт-Петербург, Университетская набережная, д. 7–9</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <ul class="footer__nav footer__nav_small">
+              <li><a class="footer__link" href="#">Полезные ссылки</a></li>
+              <li><a class="footer__link" href="#">Бесплатная юридическая помощь</a></li>
+              <li><a class="footer__link" href="#">Бесплатная психологическая помощь</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <ul class="footer__nav footer__nav_small">
+              <li><a class="footer__link" href="#">Виртуальная приемная</a></li>
+              <li><a class="footer__link" href="#">Университет. Перезагрузка</a></li>
+              <li><a class="footer__link" href="#">СВЕДЕНИЯ О СПбГУ</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <div class="footer footer_copyright">© Школа перевода и иностранных языков СПбГУ, 2020</div>
+    </div>
+    <div class="modal" id="callModal">
+      <p class="h4 text-bold mb-3">Напишите нам прямо сейчас:</p>
+      <form class="form form_modal form_callback" method="post"></form>
+      <div class="form-group mb-2"> 
+        <p class="form__label">Укажите Ваши ФИО<sup>*</sup></p>
+        <input class="input input--full input--validation" autocomplete="off" type="text" id="name" name="name" value=""/><span class="form-validation error_name mt-1 small"></span>
+      </div>
+      <div class="form-group row"> 
+        <div class="col-12 col-lg-6 mb-2"> 
+          <p class="form__label">Контактный телефон<sup>*</sup></p>
+          <input class="input input--full input--validation phone" autocomplete="off" type="tel" id="phone" name="phone" value="" inputmode="text" placeholder="Контактный телефон * "/>
+          <div class="form-validation error_phone mt-1 small"></div>
+        </div>
+        <div class="col-12 col-lg-6 mb-2"> 
+          <p class="form__label">Адрес электронной почты<sup>*</sup></p>
+          <input class="input input--full input--validation" autocomplete="off" type="email" id="email" name="email" value="" placeholder="E-mail *"/>
+          <div class="form-validation error_email mt-1 small"></div>
+        </div>
+      </div>
+      <div class="form-group mb-2"> 
+        <textarea class="input input--full" id="af_text" name="text" rows="3" value="" placeholder="Задайте вопрос или оставьте сообщение..."></textarea>
+      </div>
+      <button class="btn btn_action" type="submit">Отправить сообщение</button>
+      <div class="checkbox text-left mt-2"> 
+        <input class="checkbox__input" id="emailCheck" type="checkbox" name="agree[]" checked="checked"/>
+        <label class="checkbox__label text-small" for="emailCheck">
+           даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года 
+          №152-ФЗ «О персональных данных», на условиях и для целей, определенных в <a href="/files/policy.pdf" target="_blank" title="Согласии на обработку персональных данных">Согласии на обработку персональных данных</a>
+        </label>
+      </div>
+    </div>
     <script src="./js/jquery.inputmask.min.js"></script>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.countdown.js"></script>
     <script src="./js/test-en.js"></script>

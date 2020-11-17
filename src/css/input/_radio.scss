@@ -2,22 +2,50 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+
+    min-height: 20px;
     
     &__input{
         display: none;
 
-        &:checked + .checkbox__label:after {
+        &:checked + .radio__label:after {
             content: '';
             display: block;
+
+            background-color: $red;
+
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+
+            position: absolute;
+            left: 6px;
+            top: .6rem;
+            transform: translateY(-50%);
         }
     }
     &__label{
         position: relative;
         cursor: pointer;
 
+        margin: 0;
+        padding-left: 30px;
+        line-height: 1.2rem;
+
         &:before{
             content:'';
             display: block;
+
+            border: 1px solid $gray-600;
+
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+
+            position: absolute;
+            left: 0;
+            top: .6rem;
+            transform: translateY(-50%);
         }
     }
 }

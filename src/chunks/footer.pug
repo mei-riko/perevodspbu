@@ -1,0 +1,84 @@
+.container
+    footer.footer
+        .row
+            .col-md-3.col-sm-6.mb-2.mb-md-0
+                p.footer__title О центре
+                ul.footer__nav
+                    li
+                        a.footer__link(href="#") Преподаватели
+                    li
+                        a.footer__link(href="#") О школе
+            .col-md-3.col-sm-6.mb-2.mb-md-0
+                p.footer__title Поступающим
+                ul.footer__nav
+                    li
+                        a.footer__link(href="#") Программы обучения
+                    li
+                        a.footer__link(href="#") Контакты
+            .col-md-3.col-sm-6.mb-2.mb-md-0
+                p.footer__title Новости
+                ul.footer__nav
+                    li
+                        a.footer__link(href="#") Окончание обучения группой Беляевой
+                    li
+                        a.footer__link(href="#") Благодарственное письмо Демидову М.А.
+                    li
+                        a.footer__link(href="#") Сдача экзамена TOLES
+            .col-md-3.col-sm-6.mb-2.mb-md-0
+                p.footer__title Контактная информация
+                p.footer__address СПб, 6-ая линия В.О., дом 15, 1 этаж, офис 101
+                a.footer__link.text-underline.text-bold(data-fancybox="" data-src="#callModal" href="javascript;") Напишите нам
+    aside.footer.footer_aside
+        .row.align-items-end
+            .col-md-6.col-sm-12.mb-2.mb-md-0
+                .row.align-items-center.align-items-lg-end
+                    .col-3.col-sm-2.col-md-3.col-lg-2
+                        img(src="https://www.perevod.spbu.ru/assets/image/sublogo_png.png" class="img-fluid footer-logo" alt="САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ" title="САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ")
+                    .col-9.col-sm-10.col-md-9.col-lg-10
+                        p.footer__title.mb-1 САНКТ-ПЕТЕРБУРГСКИЙ<br> ГОСУДАРСТВЕННЫЙ<br> УНИВЕРСИТЕТ
+                        .footer__intro 199034, Россия, Санкт-Петербург, Университетская набережная, д. 7–9
+            .col-md-3.col-sm-6.mb-2.mb-md-0
+                ul.footer__nav.footer__nav_small
+                    li
+                        a.footer__link(href="#") Полезные ссылки
+                    li
+                        a.footer__link(href="#") Бесплатная юридическая помощь
+                    li
+                        a.footer__link(href="#") Бесплатная психологическая помощь
+            .col-md-3.col-sm-6
+                ul.footer__nav.footer__nav_small
+                    li
+                        a.footer__link(href="#") Виртуальная приемная
+                    li
+                        a.footer__link(href="#") Университет. Перезагрузка
+                    li
+                        a.footer__link(href="#") СВЕДЕНИЯ О СПбГУ
+    .footer.footer_copyright © Школа перевода и иностранных языков СПбГУ, 2020
+.modal#callModal
+    p.h4.text-bold.mb-3 Напишите нам прямо сейчас:
+    form(method="post" class="form form_modal form_callback")
+    .form-group.mb-2 
+        p.form__label Укажите Ваши ФИО
+            sup *
+        input.input.input--full.input--validation(autocomplete="off" type="text" id="name" name="name" value="") 
+        span.form-validation.error_name.mt-1.small
+    .form-group.row 
+        .col-12.col-lg-6.mb-2 
+            p.form__label Контактный телефон
+                sup *
+            input.input.input--full.input--validation.phone(autocomplete="off" type="tel" id="phone" name="phone" value="" inputmode="text" placeholder="Контактный телефон * ")
+            .form-validation.error_phone.mt-1.small
+        .col-12.col-lg-6.mb-2 
+            p.form__label Адрес электронной почты
+                sup *
+            input.input.input--full.input--validation(autocomplete="off" type="email" id="email" name="email" value="" placeholder="E-mail *")
+            .form-validation.error_email.mt-1.small
+    .form-group.mb-2 
+        textarea.input.input--full(id="af_text" name="text" rows="3" value="" placeholder="Задайте вопрос или оставьте сообщение...")
+    button.btn.btn_action(type="submit") Отправить сообщение
+    .checkbox.text-left.mt-2 
+        input.checkbox__input#emailCheck(type="checkbox" name="agree[]" checked="checked")
+        label.checkbox__label.text-small(for="emailCheck") 
+            | даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года 
+            | №152-ФЗ «О персональных данных», на условиях и для целей, определенных в 
+            a(href="/files/policy.pdf" target="_blank" title="Согласии на обработку персональных данных") Согласии на обработку персональных данных

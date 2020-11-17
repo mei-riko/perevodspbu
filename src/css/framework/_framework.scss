@@ -22,11 +22,11 @@ h1, h2, h3, h4, h5, h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
     margin-top: map-get($spacers, 3);
 }
-.h1,h1{font-size: 40px;}
-.h2,h2{font-size: 34px;}
-.h3,h3{font-size: 28px;}
-.h4,h4{font-size: 24px;}
-.h5,h5{font-size: 18px;}
+.h1,h1{font-size: 26px;}
+.h2,h2{font-size: 22px;}
+.h3,h3{font-size: 20px;}
+.h4,h4{font-size: 18px;}
+.h5,h5{font-size: 16px;}
 .h6,h6{font-size: 1rem;}
 
 p {
@@ -38,9 +38,13 @@ p {
     }
 }
 ol, ul{
+    font-size: 1rem;
     padding: 0;
     padding-left: 18px;
     margin-bottom: map-get($spacers, 2);
+}
+table{
+    font-size: 1rem;
 }
 a{
     display: inline-block;
@@ -65,7 +69,6 @@ table{
         color: $link-color;
     }
 }
-
 .bg-black{background-color: $black;}
 .bg-white{background-color: $white;}
 
@@ -76,11 +79,26 @@ table{
 .text-red{color: $red;}
 
 .text-uppercase{text-transform: uppercase;}
+.text-underline{text-decoration: underline;}
 .text-bold,strong,b{font-weight: $font-weight-bold;}
 
-.text-small,small,.small{font-size: 12px;}
-.text-lead,.lead{font-size: 1.15rem;}
+.text-small,small,.small{font-size: 11px;}
+.text-lead,.lead{font-size: 1.1rem;}
 
 .img-fluid{max-width: 100%; height: auto;}
 .img-border{border: 1px solid $border-color;}
 .blockquote, blockquote{}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: sm)) {}
+@media (min-width: map-get($map: $grid-breakpoints, $key: md)) {}
+@media (min-width: map-get($map: $grid-breakpoints, $key: lg)) {
+    .h1,h1{font-size: 28px;}
+    .h2,h2{font-size: 26px;}
+    .h3,h3{font-size: 22px;}
+    .h4,h4{font-size: 20px;}
+}
+@media (min-width: map-get($map: $grid-breakpoints, $key: xl)) {
+    .h1,h1{font-size: 34px;}
+    .h2,h2{font-size: 28px;}
+    .h3,h3{font-size: 24px;}
+}

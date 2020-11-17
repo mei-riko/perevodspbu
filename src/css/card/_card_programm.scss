@@ -1,0 +1,17 @@
+.card_programm{
+    padding: $spacer/2;
+    background-color: $gray-100;
+    border-color: $gray-100;
+
+    &__title{
+        @extend .text-small;
+        font-weight: $font-weight-bold;
+    }
+
+    &__content{
+        margin-bottom: $spacer/3;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

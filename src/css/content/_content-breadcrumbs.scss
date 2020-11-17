@@ -1,6 +1,17 @@
 .content-breadcrumbs{
     background-color: $gray-100;
-    font-size: 12px;
-    @extend .px-4;
+    @extend .px-2;
     @extend .py-1;
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: sm)) {
+    .content-breadcrumbs{
+        @extend .px-sm-3;
+    }
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: md)) {
+    .content-breadcrumbs{
+        @extend .px-md-4;
+    }
 }

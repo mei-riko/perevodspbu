@@ -1,0 +1,49 @@
+.footer{
+    padding: map-get($map: $spacers, $key: 4);
+    background-color:$dark-blue;
+    font-size: 13px;
+    color: $white;  
+
+    &__title{
+        font-size: 12px;
+        font-weight: $font-weight-bold;
+        line-height: 1.3;
+        text-transform: uppercase;
+    }
+    &__link{
+        color: $gray-400;
+        &:hover, &:focus{
+            color: $white;
+        }
+    }
+    &__address{
+        line-height: 1.3;
+    }
+    &__nav{
+        font-size: 1em;
+        line-height: 1.3;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li + li{
+            margin-top: $spacer/5;
+        }
+    }
+
+    // Modification
+    &_aside{
+        padding-top: $spacer;
+        padding-bottom: $spacer;
+        font-size: 12px;
+        background-color: darken($color: $dark-blue, $amount: 6);
+    }
+    &_copyright{
+        padding-top: $spacer/3;
+        padding-bottom: $spacer/3;
+        font-size: 12px;
+        background-color: darken($color: $dark-blue, $amount: 8);
+        color: $gray-600;
+        text-align: center;
+    }
+}

@@ -33,7 +33,8 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #2e62de !default;
+$blue:    #0F79B8 !default;
+$dark-blue:#171d2e !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -174,9 +175,9 @@ $body-color:                $gray-900 !default;
 //
 // Style anchor elements.
 
-$link-color:                              theme-color("primary") !default;
+$link-color:                              $gray-900 !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        theme-color("danger") !default;
 $link-hover-decoration:                   underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
@@ -213,7 +214,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1280px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -292,7 +293,7 @@ $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.6 !default;
+$line-height-base:            1.7 !default;
 $line-height-heading:         1.1 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
