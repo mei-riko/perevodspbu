@@ -47,7 +47,7 @@ $(document).ready(() =>{
         // Испанский
         if( lang == "es"){
             $(".form.form_registration select[name=lang] option").each(function(){
-                if( $(this).data("lang") != "de" ){
+                if( $(this).data("lang") != "es" ){
                     $(this).hide();
                 }else{
                     $(this).show().prop('selected', true);
@@ -71,6 +71,44 @@ $(document).ready(() =>{
                     $(this).hide();
                 }else{
                     $(this).show().prop('selected', true);
+                }
+            });
+        }
+        // Переводчик в сфере профессиональной коммуникации
+        if( lang == "combo1"){
+            $(".form.form_registration select[name=lang] option").each(function(){
+                if( $(this).data("lang") != "en" ){
+                    $(this).show();
+                }else{
+                    $(this).show().prop('selected', true);
+                }
+            });
+        }
+        // Синхронный перевод
+        if( lang == "combo2"){
+            $(".form.form_registration select[name=lang] option").each(function(){
+                if( $(this).data("lang") != "ch" ){
+                    $(this).show();
+                }else{
+                    $(this).hide();
+                }
+
+                if( $(this).data("lang") == "en" ){
+                    $(this).prop('selected', true);
+                }
+            });
+        }
+        // Гид-переводчик
+        if( lang == "combo3"){
+            $(".form.form_registration select[name=lang] option").each(function(){
+                if( $(this).data("lang") != "de" && $(this).data("lang") != "fr"){
+                    $(this).show();
+                }else{
+                    $(this).hide();
+                }
+
+                if( $(this).data("lang") == "en" ){
+                    $(this).prop('selected', true);
                 }
             });
         }
