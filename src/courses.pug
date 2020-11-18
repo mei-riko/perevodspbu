@@ -139,7 +139,7 @@ html(lang="ru")
         include chunks/footer.pug
         
         .modal#registerModal
-            form.form.form_registration(method="post" class="form form_modal form_register")
+            form.form.form_modal.form_registration(method="post")
                 p.form__label Выберите программу обучения:
                 select.input.input--full(name="programm")
                     optgroup(label="Школа перевода")
