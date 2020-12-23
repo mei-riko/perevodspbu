@@ -4,12 +4,272 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Basic Page</title>
+    <title>Index Page</title>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="./js/jquery.inputmask.js"></script>
+    <header class="container">
+      <div class="header"><a class="header__logo-spbu" href="#"></a>
+        <div class="header__logo" href="index.html"></div>
+        <div class="header__navbar navbar navbar-expand-xl">
+          <button class="header__toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false"><span class="navbar-toggler-icon header__toggler-icon"></span></button>
+          <div class="header__nav collapse navbar-collapse" id="navbarMain">
+            <ul class="list header__nav-item">
+              <li class="navbar__item"><a class="navbar__link" href="#">Программы обучения</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">Расписание и цены</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">Преподаватели</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">О Школе</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">Новости</a></li>
+              <li class="navbar__item"> <a class="navbar__link" href="#">События</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">Контакты</a></li>
+              <li class="navbar__item"><a class="navbar__link navbar__link_action" href="#">Пройти тест</a></li>
+            </ul>
+            <ul class="list header__nav-item">
+              <li class="header__contact"><a class="link link_vk" href="#">ВКонтакте</a></li>
+              <li class="header__contact"><a class="link link_fb" href="#">Facebook</a></li>
+              <li class="header__contact"><a class="link link_email" href="#">perevod.spb@spbu.ru</a></li>
+              <li class="header__contact"><a class="link" href="#">8 (812) 363-66-59</a></li>
+              <li class="header__contact"><a class="link link_phone" href="#">+7 911 933-66-59</a></li>
+              <li class="header__contact"><a class="link" href="#">8 (812) 323-42-88</a></li>
+              <li class="header__btn"><a class="btn btn--small btn_default" data-fancybox="" data-src="#registerModal" href="javascript;">Заявка на курс</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="container">
+      <div class="slider slider_index">
+        <div class="slider__item slider_index__item" style="background-image:url('https://www.perevod.spbu.ru/images/2020/courses.jpg');background-size:cover;background-position:left center;">
+          <div class="slider__content">
+            <p class="h2">Новый набор! «Переводчик в сфере профессиональной коммуникации»</p>
+            <p> <strong>Период набора:</strong>с 15 декабря 2020 г. по 30 января 2021 г. <br><strong>Начало обучения:</strong>с 15 февраля 2021 г.</p><a class="btn btn_action" href="#">Узнать больше</a>
+          </div>
+        </div>
+        <div class="slider__item slider_index__item" style="background-image:url('https://www.perevod.spbu.ru/images/2020/summer-online-school.jpg');background-size:cover;background-position:left center;">
+          <div class="slider__content">
+            <p class="h2">I Летняя школа перевода СПбГУ online <strong>18-20 июня 2020</strong></p>
+            <p><strong>Организаторы мероприятия:</strong>Факультет иностранных языков СПбГУ и Школа перевода и иностранных языков СПбГУ. <br>
+              Вы можете зарегистрироваться для участия в летней школе до 15 июня 2020 года.
+            </p><a class="btn btn_action" href="#">Узнать больше</a>
+          </div>
+        </div>
+      </div>
+      <div class="p-3 p-md-4 bg-white">
+        <h2 class="text-bold mb-1 mb-md-2">Программы обучения</h2>
+        <div class="card-column card-column_md-2 card-column_lg-3">
+          <div class="card card_item-programm mt-3">
+            <div class="card_item-programm__header">
+              <h5 class="card_item-programm__title">Школа перевода</h5><span class="card__label">EN</span><span class="card__label">IT</span>
+            </div>
+            <div class="card__image card__image_full" style="background-image:url('https://www.perevod.spbu.ru/assets/image/school.jpg')"></div>
+            <div class="card_item-programm__content"><a class="card_item-programm__link" href="interpreter">Переводчик в сфере профессиональной коммуникации</a><a class="card_item-programm__link" href="synchronous">Конференц-перевод</a><a class="card_item-programm__link" href="sinxronnyij-perevod">Синхронный перевод</a></div>
+          </div>
+          <div class="card card_item-programm mt-3">
+            <div class="card_item-programm__header">
+              <h5 class="card_item-programm__title">Подготовка к экзаменам на международные сертификаты</h5><span class="card__label">EN</span>
+            </div>
+            <div class="card__image card__image_full" style="background-image:url('https://www.perevod.spbu.ru/assets/image/index/exam.jpg')"></div>
+            <div class="card_item-programm__content"><a class="card_item-programm__link" href="ielts">IELTS</a><a class="card_item-programm__link" href="toefl">TOEFL</a><a class="card_item-programm__link" href="first-certificate-english-fce">FCE</a><a class="card_item-programm__link" href="certificate-in-advanced-english-cae">CAE</a></div>
+          </div>
+          <div class="card card_item-programm mt-3">
+            <div class="card_item-programm__header">
+              <h5 class="card_item-programm__title">Школа гидов-переводчиков</h5><span class="card__label">EN</span>
+            </div>
+            <div class="card__image card__image_full" style="background-image:url('https://www.perevod.spbu.ru/assets/image/guide.jpg')"></div>
+            <div class="card_item-programm__content"><a class="card_item-programm__link" href="guide-and-interpreter">Гид-переводчик</a></div>
+          </div>
+          <div class="card card_item-programm mt-3">
+            <div class="card_item-programm__header">
+              <h5 class="card_item-programm__title">Повышение квалификации преподавателей вузов</h5><span class="card__label">EN</span>
+            </div>
+            <div class="card__image card__image_full" style="background-image:url('https://www.perevod.spbu.ru/assets/image/teacher.jpg')"></div>
+            <div class="card_item-programm__content"><a class="card_item-programm__link" href="anglijskij-yazyik-dlya-prepodavaniya-speczialnyix-discziplin-v-vuze-(emi)">Английский язык для преподавателей специальных дисциплин в&nbsp;вузах</a></div>
+          </div>
+          <div class="card card_item-programm mt-3">
+            <div class="card_item-programm__header">
+              <h5 class="card_item-programm__title">Курсы иностранных языков</h5><span class="card__label">EN</span>
+            </div>
+            <div class="card__image card__image_full" style="background-image:url('https://www.perevod.spbu.ru/assets/image/study.jpg')"></div>
+            <div class="card_item-programm__content"><a class="card_item-programm__link" href="general-course">Курс разговорного английского языка</a><a class="card_item-programm__link" href="delovoj-anglijskij-bec">Деловой английский язык. BEC</a><a class="card_item-programm__link" href="english-for-lawyers-toles">Английский язык для юристов. TOLES</a><a class="card_item-programm__link" href="letnij-intensiv">Летняя школа: Интенсивный курс английского языка</a><a class="card_item-programm__link" href="letnyaya-shkola-foneticheskij-kurs">Летняя школа: Фонетический курс английского языка</a><a class="card_item-programm__link" href="kursyi-nemeczkogo-yazyika">Курс разговорного немецкого языка</a><a class="card_item-programm__link" href="kursyi-franczuzskogo-yazyika">Курс разговорного французского языка</a><a class="card_item-programm__link" href="kursyi-italyanskogo-yazyika">Курс разговорного  итальянского языка</a><a class="card_item-programm__link" href="kursyi-ispanskogo-yazyika">Курс разговорного  испанского языка</a></div>
+          </div>
+          <div class="card card_item-programm mt-3">
+            <div class="card_item-programm__header">
+              <h5 class="card_item-programm__title">Корпоративное обучение</h5><span class="card__label">EN</span>
+            </div>
+            <div class="card__image card__image_full" style="background-image:url('https://www.perevod.spbu.ru/assets/image/corp.jpg')"></div>
+            <div class="card_item-programm__content"><a class="card_item-programm__link" href="anglijskij-yazyik-s-elementami-delovogo-i-professionalnogo-obshheniya">Английский с элементами делового и&nbsp;профессионального общения</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="p-3 p-md-4 bg-light-grey">
+        <h3 class="h2 text-bold mb-0 mb-md-2">Преимущества обучения у нас</h3>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 col-xl-3 mt-2 mt-md-3">
+            <div class="card card_advantage">Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-3 mt-2 mt-md-3">
+            <div class="card card_advantage">Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-3 mt-2 mt-md-3">
+            <div class="card card_advantage">Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-3 mt-2 mt-md-3">
+            <div class="card card_advantage">Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-3 mt-2 mt-md-3">
+            <div class="card card_advantage">Виртуальные образовательные платформы, онлайн-курсы</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-3 mt-2 mt-md-3">
+            <div class="card card_advantage">Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-3 mt-2 mt-md-3">
+            <div class="card card_advantage">Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-3 mt-2 mt-md-3">
+            <div class="card card_advantage">Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»</div>
+          </div>
+        </div>
+      </div>
+      <div class="p-3 p-md-4 bg-white">
+        <h4 class="text-bold text-uppercase mb-0">Как записаться на курс?</h4>
+        <div class="row">
+          <div class="col-12 col-md-4 mt-3"><a class="card card_link" href="#">
+              <div class="card_link__content"><img class="card__icon" src="https://www.perevod.spbu.ru/assets/image/icon/test.png"/>
+                <p class="h5 text-bold mt-0">Выберите подходящий курс обучения</p>
+                <p class="text-small">Подробную информацию Вы найдете на странице каждого курса.</p>
+              </div></a></div>
+          <div class="col-12 col-md-4 mt-3"><a class="card card_link" href="#">
+              <div class="card_link__content"><img class="card__icon" src="https://www.perevod.spbu.ru/assets/image/icon/test.png"/>
+                <p class="h5 text-bold mt-0">Выберите подходящий курс обучения</p>
+                <p class="text-small">Подробную информацию Вы найдете на странице каждого курса.</p>
+              </div></a></div>
+          <div class="col-12 col-md-4 mt-3"><a class="card card_link card_link--action" href="#">
+              <div class="card_link__content"><img class="card__icon" src="https://www.perevod.spbu.ru/assets/image/icon/test.png"/>
+                <p class="h5 text-bold mt-0">Выберите подходящий курс обучения</p>
+                <p class="text-small">Подробную информацию Вы найдете на странице каждого курса.</p>
+              </div></a></div>
+        </div>
+        <h4 class="text-bold text-uppercase mt-4 mb-3"><a class="text-underline" href="#">ОТЗЫВЫ </a> НАШИХ СЛУШАТЕЛЕЙ</h4>
+        <div class="row">
+          <div class="col-12 col-md-4 mb-3">
+            <div class="review"><img class="review__img" src="https://www.perevod.spbu.ru/assets/cache_image/noimage_120x120_5e8.jpg"/>
+              <div class="review__name">Юлия Шишкова</div>
+              <div class="review__content">Большое Вам спасибо за программу! Очень пригодились в работе знания, полученные на программе. И в целом о программе только самые приятные воспоминания.<a class="review__link" data-fancybox="" href="https://images.satu.kz/48692573_48692573.jpg?PIMAGE_ID=48692573">Читать дальше</a></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <div class="review"><img class="review__img" src="https://www.perevod.spbu.ru/assets/cache_image/noimage_120x120_5e8.jpg"/>
+              <div class="review__name">Юлия Шишкова</div>
+              <div class="review__content">Большое Вам спасибо за программу! Очень пригодились в работе знания, полученные на программе. И в целом о программе только самые приятные воспоминания.<a class="review__link" data-fancybox="" href="https://images.satu.kz/48692573_48692573.jpg?PIMAGE_ID=48692573">Посмотреть отзыв</a></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <div class="review"><img class="review__img" src="https://www.perevod.spbu.ru/assets/cache_image/noimage_120x120_5e8.jpg"/>
+              <div class="review__name">Юлия Шишкова</div>
+              <div class="review__content">Большое Вам спасибо за программу! Очень пригодились в работе знания, полученные на программе. И в целом о программе только самые приятные воспоминания.<a class="review__link" data-fancybox="" href="https://images.satu.kz/48692573_48692573.jpg?PIMAGE_ID=48692573">Посмотреть отзыв</a></div>
+            </div>
+          </div>
+        </div><a class="btn btn_action" href="#">Оставить отзыв</a>
+      </div>
+    </section>
+    <div class="container">
+      <footer class="footer">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <p class="footer__title">О центре</p>
+            <ul class="footer__nav">
+              <li><a class="footer__link" href="#">Преподаватели</a></li>
+              <li><a class="footer__link" href="#">О школе</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <p class="footer__title">Поступающим</p>
+            <ul class="footer__nav">
+              <li><a class="footer__link" href="#">Программы обучения</a></li>
+              <li><a class="footer__link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <p class="footer__title">Новости</p>
+            <ul class="footer__nav">
+              <li><a class="footer__link" href="#">Окончание обучения группой Беляевой</a></li>
+              <li><a class="footer__link" href="#">Благодарственное письмо Демидову М.А.</a></li>
+              <li><a class="footer__link" href="#">Сдача экзамена TOLES</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <p class="footer__title">Контактная информация</p>
+            <p class="footer__address">СПб, 6-ая линия В.О., дом 15, 1 этаж, офис 101</p><a class="footer__link text-underline text-bold" data-fancybox="" data-src="#callModal" href="javascript;">Напишите нам</a>
+          </div>
+        </div>
+      </footer>
+      <aside class="footer footer_aside">
+        <div class="row align-items-end">
+          <div class="col-md-6 col-sm-12 mb-2 mb-md-0">
+            <div class="row align-items-center align-items-lg-end">
+              <div class="col-3 col-sm-2 col-md-3 col-lg-2"><img class="img-fluid footer-logo" src="https://www.perevod.spbu.ru/assets/image/sublogo_png.png" alt="САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ" title="САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ"/></div>
+              <div class="col-9 col-sm-10 col-md-9 col-lg-10">
+                <p class="footer__title mb-1">САНКТ-ПЕТЕРБУРГСКИЙ<br> ГОСУДАРСТВЕННЫЙ<br> УНИВЕРСИТЕТ</p>
+                <div class="footer__intro">199034, Россия, Санкт-Петербург, Университетская набережная, д. 7–9</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+            <ul class="footer__nav footer__nav_small">
+              <li><a class="footer__link" href="#">Полезные ссылки</a></li>
+              <li><a class="footer__link" href="#">Бесплатная юридическая помощь</a></li>
+              <li><a class="footer__link" href="#">Бесплатная психологическая помощь</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <ul class="footer__nav footer__nav_small">
+              <li><a class="footer__link" href="#">Виртуальная приемная</a></li>
+              <li><a class="footer__link" href="#">Университет. Перезагрузка</a></li>
+              <li><a class="footer__link" href="#">СВЕДЕНИЯ О СПбГУ</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <div class="footer footer_copyright">© Школа перевода и иностранных языков СПбГУ, 2020</div>
+    </div>
+    <div class="modal" id="callModal">
+      <p class="h4 text-bold mb-3">Напишите нам прямо сейчас:</p>
+      <form class="form form_modal form_callback" method="post"></form>
+      <div class="form-group mb-2"> 
+        <p class="form__label">Укажите Ваши ФИО<sup>*</sup></p>
+        <input class="input input--full input--validation" autocomplete="off" type="text" id="name" name="name" value=""/><span class="form-validation error_name mt-1 small"></span>
+      </div>
+      <div class="form-group row"> 
+        <div class="col-12 col-lg-6 mb-2"> 
+          <p class="form__label">Контактный телефон<sup>*</sup></p>
+          <input class="input input--full input--validation phone" autocomplete="off" type="tel" id="phone" name="phone" value="" inputmode="text" placeholder="Контактный телефон * "/>
+          <div class="form-validation error_phone mt-1 small"></div>
+        </div>
+        <div class="col-12 col-lg-6 mb-2"> 
+          <p class="form__label">Адрес электронной почты<sup>*</sup></p>
+          <input class="input input--full input--validation" autocomplete="off" type="email" id="email" name="email" value="" placeholder="E-mail *"/>
+          <div class="form-validation error_email mt-1 small"></div>
+        </div>
+      </div>
+      <div class="form-group mb-2"> 
+        <textarea class="input input--full" id="af_text" name="text" rows="3" value="" placeholder="Задайте вопрос или оставьте сообщение..."></textarea>
+      </div>
+      <button class="btn btn_action" type="submit">Отправить сообщение</button>
+      <div class="checkbox text-left mt-2"> 
+        <input class="checkbox__input" id="emailCheck" type="checkbox" name="agree[]" checked="checked"/>
+        <label class="checkbox__label text-small" for="emailCheck">
+           даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года 
+          №152-ФЗ «О персональных данных», на условиях и для целей, определенных в <a href="/files/policy.pdf" target="_blank" title="Согласии на обработку персональных данных">Согласии на обработку персональных данных</a>
+        </label>
+      </div>
+    </div>
+    <script src="./js/jquery.inputmask.min.js"></script>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <link href="./css/slick.css" rel="stylesheet"/>
+    <link href="./css/slick-theme.css" rel="stylesheet"/>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

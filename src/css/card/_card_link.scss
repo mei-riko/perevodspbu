@@ -1,0 +1,38 @@
+.card_link{
+    position: relative;
+    background: $white;
+
+    padding: 30px;
+    transition: .4s;
+    // padding-bottom: 50px;
+
+    &:after{
+        content: '';
+        display: block;
+        height: 20px;
+        background: url("../icon/arrow-right.svg") no-repeat left center / contain;
+        margin-top: $spacer/2;
+    }
+    &:hover, &:focus{
+        // transform: scale(.97);
+        text-decoration: none;
+        background-color: $gray-100;
+        color: $black;
+    }
+    &--action{
+        background: $red;
+        color: $white;
+        &:after{
+            background-image: url("../icon/arrow-right_white.svg");
+        }
+        &:hover, &:focus{
+            background-color: darken($color: $red, $amount: 6);
+            color: $white;
+        }
+    }
+
+    &__content{
+        width: 210px;
+        max-width: 100%;
+    }
+}

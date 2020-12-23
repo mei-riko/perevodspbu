@@ -5,6 +5,8 @@ html,body {
     background-color: $gray-200;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
+
+    min-width: 340px;
 }
 *,
 *::before,
@@ -71,6 +73,7 @@ table{
 }
 .bg-black{background-color: $black;}
 .bg-white{background-color: $white;}
+.bg-light-grey{background-color: $gray-100;}
 
 .text-white{color: $white;}
 .text-black{color: $black;}

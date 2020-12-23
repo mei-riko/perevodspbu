@@ -1,0 +1,18 @@
+.card_advantage{
+    background: $white;
+    border-left: 8px solid $red;
+    padding: $spacer/2;
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: md)) {
+    .card_advantage{
+        padding-left: $spacer;
+        height: 110px;
+    }
+}
+@media (min-width: map-get($map: $grid-breakpoints, $key: lg)) {
+    .card_advantage{
+        padding: $spacer;
+        height: 130px;
+    }    
+}

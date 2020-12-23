@@ -1,0 +1,166 @@
+.header{
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 120px;
+
+    background-color: $white;
+
+    &__logo-spbu{
+        flex: 0 0 60px;
+        max-width: 60px;
+        height: 60px;
+        background: url("../icon/logo-spbu.svg") no-repeat center / 50% ;
+        border-right: 1px solid $gray-400;
+    }
+    &__logo{
+        flex: 0 0 calc(100% - 120px);
+        max-width: calc(100% - 120px);
+        height: 60px;
+        background: url("../icon/logo-new-2020.svg") no-repeat center / 140px ;
+        background-position-x: $spacer/2;
+
+        min-width: 200px;
+    }
+    &__navbar{
+        flex: 0 0 60px;
+        max-width: 60px;
+        justify-content: flex-end;
+
+        position: relative;
+    }
+    &__toggler{
+        // display: none;
+        outline: none;
+        padding: 0;
+
+        &:hover, &:focus{
+            outline: none;
+        }
+        &-icon{
+            background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            background-size: 22px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $gray-400;
+        }
+    }
+    &__nav{
+        flex-wrap: wrap;
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        width: 320px;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        z-index: 999;
+
+        background-color: $gray-100;
+        text-align: right;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item{
+            width: 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            justify-content: flex-end;
+
+            padding: 0 $spacer;
+            margin-top: $spacer;
+
+            &:last-child{
+                margin-bottom: $spacer;
+            }
+        }
+    }
+    &__contact{
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: $spacer/3;
+
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    &__btn{
+        margin-top: $spacer;
+    }
+}
+@media (min-width: map-get($map: $grid-breakpoints, $key: sm)) {
+    .header{
+        &__logo-spbu{
+            flex: 0 0 80px;
+            max-width: 80px;
+            height: 80px;
+            background-size: 50%;
+        }
+        &__logo{
+            flex: 0 0 220px;
+            max-width: 220px;
+            height: 80px;
+            background-size: 80%;
+            background-position-x: center;
+        }
+        &__navbar{
+            flex: 0 0 calc(100% - 300px);
+            max-width: calc(100% - 300px);
+        }
+    }
+}
+@media (min-width: map-get($map: $grid-breakpoints, $key: xl)) {
+    .header{
+        &__toggler{
+            display: none;
+        }
+        &__logo-spbu{
+            flex: 0 0 120px;
+            max-width: 120px;
+            height: 120px;
+        }
+        &__logo{
+            flex: 0 0 280px;
+            max-width: 280px;
+            height: 120px;
+        }
+        &__navbar{
+            flex: 0 0 calc(100% - 400px);
+            max-width: calc(100% - 400px);
+        }
+        &__nav{
+            position: unset;
+            background: inherit;
+            width: auto;
+            max-height: unset;
+            overflow-y: unset;
+
+            flex-direction: column-reverse;
+
+            &-item{
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+
+                // margin-top: 0;
+                margin-top: $spacer/2;
+
+                &:last-child{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__contact{
+            margin-top: 0;
+            margin-left: $spacer/2;
+    
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        &__btn{
+            margin-top: 0;
+            margin-left: $spacer;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.link{
+    position: relative;
+
+    &_phone{
+        padding-right: 40px;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            background: url("../icon/whatsapp.svg") no-repeat center right / 14px;
+        }
+
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            background: url("../icon/viber.svg") no-repeat center right / 14px;
+        }
+    }
+    &_email{
+        color: $link-hover-color;
+        text-decoration: underline;
+
+        &:hover, &:focus{
+            color: $link-color;
+        }
+    }
+}

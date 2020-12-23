@@ -1,0 +1,36 @@
+.navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &__item{
+        margin-bottom: $spacer/3;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__link{
+        width: 100%;
+        &:hover{
+            text-decoration: none;
+        }
+        &--active{
+            font-weight: bold;
+        }
+        &_action{
+            font-weight: bold;
+            color: $red;
+        }
+    }
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: xl)) {
+    .navbar{
+        &__item{
+            margin-right: 20px;
+            margin-bottom: 0;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}

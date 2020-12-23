@@ -1,0 +1,32 @@
+.card_item-programm{
+    &__header{
+        padding: $spacer/2;
+    }
+    &__title{
+        margin-bottom: $spacer/2;
+    }
+    
+    &__content{
+        padding: $spacer/2;
+    }
+    &__link{
+        line-height: 1.3;
+        display: block;
+        margin-bottom: $spacer/3;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: lg)) {
+    .card_item-programm{
+        &__header{
+            padding: $spacer;
+        }
+        &__content{
+            padding: $spacer;
+        }
+    }
+}

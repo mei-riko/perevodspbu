@@ -37,23 +37,36 @@
 @import "input/radio";
 @import "input/select";
 
+@import "link/link";
+
+@import "list/list";
+@import "list/list_inline";
+
 @import "header/header";
+@import "navbar/navbar";
+
 @import "footer/footer";
 
 @import "modal/modal";
 @import "pagination/pagination";
-@import "slider/slider";
 
-@import "navbar/navbar";
+@import "slider/slider";
+@import "slider/slider_index";
+
 
 @import "breadcrumbs/breadcrumbs";
 
 @import "test/test";
 
+@import "card/card-column";
 @import "card/card";
+@import "card/card_advantage";
+@import "card/card_link";
 @import "card/card_test";
 @import "card/card_programm";
+@import "card/card_item-programm";
 
+@import "review/review";
 @import "question/question";
 
 @import "content/content";

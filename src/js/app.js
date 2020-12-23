@@ -41,6 +41,18 @@ $(document).ready(() =>{
     }
   });
 
+  // Slider
+  if( $('.slider').length > 0 ){
+    // Slider On Index Page
+    let $slickContent = $('.slider.slider_index');
+		$slickContent.slick({
+			slidesToShow  : 1,
+			slidesToScroll: 1,
+			arrows        : false,
+			dots          : true,
+      autoplay      : false
+    });
+  };
   // Modal
   $('[data-fancybox]').fancybox({
     autoFocus: false,

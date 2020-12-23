@@ -1,0 +1,41 @@
+.review{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__img{
+        flex: 0 0 44px;
+        max-width: 44px;
+
+        border-radius: 22px;
+    }
+    &__name{
+        flex: 0 0 calc(100% - 44px);
+        max-width: calc(100% - 44px);
+        padding-left: $spacer/2;
+
+        font-weight: bold;
+    }
+    &__content{
+        font-size: 12px;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: $spacer/2;
+    }
+
+    &__link{
+        display: block;
+        @extend .text-small;
+        font-weight: bold;
+        color: $red;
+        margin-top: $spacer/3;
+    }
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: lg)) {
+    .review{
+        &__content{
+            font-size: 14px;
+        }
+    }
+}

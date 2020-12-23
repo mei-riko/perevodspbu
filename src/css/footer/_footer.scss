@@ -1,5 +1,5 @@
 .footer{
-    padding: map-get($map: $spacers, $key: 4);
+    padding: map-get($map: $spacers, $key: 3);
     background-color:$dark-blue;
     font-size: 13px;
     color: $white;  
@@ -45,5 +45,11 @@
         background-color: darken($color: $dark-blue, $amount: 8);
         color: $gray-600;
         text-align: center;
+    }
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: md)) {
+    .footer{
+        padding: map-get($map: $spacers, $key: 4);
     }
 }

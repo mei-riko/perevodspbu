@@ -3,6 +3,25 @@
     width: 100%;
     border: 1px solid $gray-300;
     
+    &__label{
+        display: inline-block;
+        padding: 4px 6px;
+        background-color: $gray-200;
+        font-weight: bold;
+        line-height: 1;
+        border-radius: 4px;
+        margin-right: 6px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__icon{
+        width: auto;
+        height: 20px;
+        margin: 0 0 15px;
+    }
+
     &__title{
         display: block;
         background: $white;
@@ -64,6 +83,11 @@
         padding-bottom: $spacer/2;
         margin-bottom: $spacer/2;
         border-bottom: 1px solid $gray-300;
+    }
+
+    &__image{
+        height: 180px;
+        background: no-repeat center / cover;
     }
 
     &--next{

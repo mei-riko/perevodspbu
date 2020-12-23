@@ -3,14 +3,163 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Basic Page
+        title Index Page
 
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        section.container
+            .slider.slider_index
+                .slider__item.slider_index__item(style="background-image:url('https://www.perevod.spbu.ru/images/2020/courses.jpg');background-size:cover;background-position:left center;")
+                    .slider__content
+                        p.h2 Новый набор! «Переводчик в сфере профессиональной коммуникации»
+                        p 
+                            strong Период набора:
+                            | с 15 декабря 2020 г. по 30 января 2021 г. <br>
+                            strong Начало обучения:
+                            | с 15 февраля 2021 г.
+                        a.btn.btn_action(href="#") Узнать больше
+                .slider__item.slider_index__item(style="background-image:url('https://www.perevod.spbu.ru/images/2020/summer-online-school.jpg');background-size:cover;background-position:left center;")
+                    .slider__content
+                        p.h2 I Летняя школа перевода СПбГУ online 
+                            strong 18-20 июня 2020
+                        p
+                            strong Организаторы мероприятия:
+                            | Факультет иностранных языков СПбГУ и Школа перевода и иностранных языков СПбГУ. <br>
+                            | Вы можете зарегистрироваться для участия в летней школе до 15 июня 2020 года.
+                        a.btn.btn_action(href="#") Узнать больше
+            .p-3.p-md-4.bg-white
+                h2.text-bold.mb-1.mb-md-2 Программы обучения
+                .card-column.card-column_md-2.card-column_lg-3
+                    .card.card_item-programm.mt-3
+                        .card_item-programm__header
+                            h5.card_item-programm__title Школа перевода
+                            span.card__label EN
+                            span.card__label IT
+                        .card__image.card__image_full(style="background-image:url('https://www.perevod.spbu.ru/assets/image/school.jpg')")
+                        .card_item-programm__content
+                            a.card_item-programm__link(href="interpreter") Переводчик в сфере профессиональной коммуникации
+                            a.card_item-programm__link(href="synchronous") Конференц-перевод
+                            a.card_item-programm__link(href="sinxronnyij-perevod") Синхронный перевод
+                    .card.card_item-programm.mt-3
+                        .card_item-programm__header
+                            h5.card_item-programm__title Подготовка к экзаменам на международные сертификаты
+                            span.card__label EN
+                        .card__image.card__image_full(style="background-image:url('https://www.perevod.spbu.ru/assets/image/index/exam.jpg')")
+                        .card_item-programm__content
+                            a.card_item-programm__link(href="ielts") IELTS
+                            a.card_item-programm__link(href="toefl") TOEFL
+                            a.card_item-programm__link(href="first-certificate-english-fce") FCE
+                            a.card_item-programm__link(href="certificate-in-advanced-english-cae") CAE
+                    .card.card_item-programm.mt-3
+                        .card_item-programm__header
+                            h5.card_item-programm__title Школа гидов-переводчиков
+                            span.card__label EN
+                        .card__image.card__image_full(style="background-image:url('https://www.perevod.spbu.ru/assets/image/guide.jpg')")
+                        .card_item-programm__content
+                            a.card_item-programm__link(href="guide-and-interpreter") Гид-переводчик
+                    .card.card_item-programm.mt-3
+                        .card_item-programm__header
+                            h5.card_item-programm__title Повышение квалификации преподавателей вузов
+                            span.card__label EN
+                        .card__image.card__image_full(style="background-image:url('https://www.perevod.spbu.ru/assets/image/teacher.jpg')")
+                        .card_item-programm__content
+                            a.card_item-programm__link(href="anglijskij-yazyik-dlya-prepodavaniya-speczialnyix-discziplin-v-vuze-(emi)") Английский язык для преподавателей специальных дисциплин в&nbsp;вузах
+                    .card.card_item-programm.mt-3
+                        .card_item-programm__header
+                            h5.card_item-programm__title Курсы иностранных языков
+                            span.card__label EN
+                        .card__image.card__image_full(style="background-image:url('https://www.perevod.spbu.ru/assets/image/study.jpg')")
+                        .card_item-programm__content
+                            a.card_item-programm__link(href="general-course") Курс разговорного английского языка
+                            a.card_item-programm__link(href="delovoj-anglijskij-bec") Деловой английский язык. BEC
+                            a.card_item-programm__link(href="english-for-lawyers-toles") Английский язык для юристов. TOLES
+                            a.card_item-programm__link(href="letnij-intensiv") Летняя школа: Интенсивный курс английского языка
+                            a.card_item-programm__link(href="letnyaya-shkola-foneticheskij-kurs") Летняя школа: Фонетический курс английского языка
+                            a.card_item-programm__link(href="kursyi-nemeczkogo-yazyika") Курс разговорного немецкого языка
+                            a.card_item-programm__link(href="kursyi-franczuzskogo-yazyika") Курс разговорного французского языка
+                            a.card_item-programm__link(href="kursyi-italyanskogo-yazyika") Курс разговорного  итальянского языка
+                            a.card_item-programm__link(href="kursyi-ispanskogo-yazyika") Курс разговорного  испанского языка
+                    .card.card_item-programm.mt-3
+                        .card_item-programm__header
+                            h5.card_item-programm__title Корпоративное обучение
+                            span.card__label EN
+                        .card__image.card__image_full(style="background-image:url('https://www.perevod.spbu.ru/assets/image/corp.jpg')")
+                        .card_item-programm__content
+                            a.card_item-programm__link(href="anglijskij-yazyik-s-elementami-delovogo-i-professionalnogo-obshheniya") Английский с элементами делового и&nbsp;профессионального общения
+            .p-3.p-md-4.bg-light-grey
+                h3.h2.text-bold.mb-0.mb-md-2 Преимущества обучения у нас
+                .row
+                    .col-12.col-md-6.col-lg-6.col-xl-3.mt-2.mt-md-3
+                        .card.card_advantage Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»
+                    .col-12.col-md-6.col-lg-6.col-xl-3.mt-2.mt-md-3
+                        .card.card_advantage Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»
+                    .col-12.col-md-6.col-lg-6.col-xl-3.mt-2.mt-md-3
+                        .card.card_advantage Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»
+                    .col-12.col-md-6.col-lg-6.col-xl-3.mt-2.mt-md-3
+                        .card.card_advantage Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»
+                    .col-12.col-md-6.col-lg-6.col-xl-3.mt-2.mt-md-3
+                        .card.card_advantage Виртуальные образовательные платформы, онлайн-курсы
+                    .col-12.col-md-6.col-lg-6.col-xl-3.mt-2.mt-md-3
+                        .card.card_advantage Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»
+                    .col-12.col-md-6.col-lg-6.col-xl-3.mt-2.mt-md-3
+                        .card.card_advantage Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»
+                    .col-12.col-md-6.col-lg-6.col-xl-3.mt-2.mt-md-3
+                        .card.card_advantage Обучение в Санкт-Петербургском государственном универсaитете, в корпусе у «Василеостровской»
+            .p-3.p-md-4.bg-white
+                h4.text-bold.text-uppercase.mb-0 Как записаться на курс?
+                .row
+                    .col-12.col-md-4.mt-3
+                        a.card.card_link(href="#")
+                            .card_link__content
+                                img.card__icon(src="https://www.perevod.spbu.ru/assets/image/icon/test.png")
+                                p.h5.text-bold.mt-0 Выберите подходящий курс обучения
+                                p.text-small Подробную информацию Вы найдете на странице каждого курса.
+                    .col-12.col-md-4.mt-3
+                        a.card.card_link(href="#")
+                            .card_link__content
+                                img.card__icon(src="https://www.perevod.spbu.ru/assets/image/icon/test.png")
+                                p.h5.text-bold.mt-0 Выберите подходящий курс обучения
+                                p.text-small Подробную информацию Вы найдете на странице каждого курса.
+                    .col-12.col-md-4.mt-3
+                        a.card.card_link.card_link--action(href="#")
+                            .card_link__content
+                                img.card__icon(src="https://www.perevod.spbu.ru/assets/image/icon/test.png")
+                                p.h5.text-bold.mt-0 Выберите подходящий курс обучения
+                                p.text-small Подробную информацию Вы найдете на странице каждого курса.
+                h4.text-bold.text-uppercase.mt-4.mb-3
+                    a.text-underline(href="#") ОТЗЫВЫ 
+                    |  НАШИХ СЛУШАТЕЛЕЙ
+                .row
+                    .col-12.col-md-4.mb-3
+                        .review
+                            img.review__img(src="https://www.perevod.spbu.ru/assets/cache_image/noimage_120x120_5e8.jpg")
+                            .review__name Юлия Шишкова
+                            .review__content Большое Вам спасибо за программу! Очень пригодились в работе знания, полученные на программе. И в целом о программе только самые приятные воспоминания.
+                                a.review__link(data-fancybox="" href="https://images.satu.kz/48692573_48692573.jpg?PIMAGE_ID=48692573") Читать дальше
+                    .col-12.col-md-4.mb-3
+                        .review
+                            img.review__img(src="https://www.perevod.spbu.ru/assets/cache_image/noimage_120x120_5e8.jpg")
+                            .review__name Юлия Шишкова
+                            .review__content Большое Вам спасибо за программу! Очень пригодились в работе знания, полученные на программе. И в целом о программе только самые приятные воспоминания.
+                                a.review__link(data-fancybox="" href="https://images.satu.kz/48692573_48692573.jpg?PIMAGE_ID=48692573") Посмотреть отзыв
+                    .col-12.col-md-4.mb-3
+                        .review
+                            img.review__img(src="https://www.perevod.spbu.ru/assets/cache_image/noimage_120x120_5e8.jpg")
+                            .review__name Юлия Шишкова
+                            .review__content Большое Вам спасибо за программу! Очень пригодились в работе знания, полученные на программе. И в целом о программе только самые приятные воспоминания.
+                                a.review__link(data-fancybox="" href="https://images.satu.kz/48692573_48692573.jpg?PIMAGE_ID=48692573") Посмотреть отзыв
+                a.btn.btn_action(href="#") Оставить отзыв
         include chunks/footer.pug
-        script(src="./js/jquery.inputmask.js")
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
+
         script(src="./js/app.min.js")

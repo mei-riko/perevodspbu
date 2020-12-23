@@ -1,1 +1,49 @@
-.slider{}
+.slider{
+    &__item{
+        padding: map-get($map: $spacers, $key: 3);
+    }
+    &__content{
+        width: 480px;
+        max-width: 100%;
+        padding: $spacer;
+        background: rgba(255,255,255,0.65);
+    }
+
+    // Slick
+    .slick-slide{
+        height: auto;
+        outline: none;
+        &:hover,
+        &:focus{
+            outline: none;
+        }
+    }
+    .slick-dots{
+        background-color: $gray-100;
+        bottom: -30px;
+        li{
+            width: 30px;
+            height: 30px;
+            margin: 0;
+
+            button{
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                &:before{
+                    font-size: 36px;
+                    top: 5px;
+                    left: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: md)) {
+    .slider{
+        &__item{
+            padding: map-get($map: $spacers, $key: 4);            
+        }
+    }
+}

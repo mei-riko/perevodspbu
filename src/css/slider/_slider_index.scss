@@ -1,0 +1,18 @@
+.slider_index{
+    height: 360px;
+
+    &__item{
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &.slick-slide{
+            height: 100%;
+        }
+    }
+}
+
+.slick-initialized .slick-slide.slider_index__item{
+    display: flex;
+    align-items: center;
+}
