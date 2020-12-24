@@ -2,6 +2,13 @@
     &__item{
         padding: map-get($map: $spacers, $key: 3);
     }
+    &__title{
+        font-family: $font-family-heading;
+        line-height: $line-height-heading;
+        margin-bottom: map-get($spacers, 2);
+
+        font-size: 18px;
+    }
     &__content{
         width: 480px;
         max-width: 100%;
@@ -44,6 +51,17 @@
     .slider{
         &__item{
             padding: map-get($map: $spacers, $key: 4);            
+        }
+        &__title{
+            font-size: 22px;
+        }
+    }
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: lg)) {
+    .slider{
+        &__title{
+            font-size: 26px;
         }
     }
 }

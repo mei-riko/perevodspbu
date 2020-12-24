@@ -214,7 +214,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1580px
+  xl: 1440px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -279,7 +279,7 @@ $embed-responsive-aspect-ratios: join(
 $font-family-sans-serif:      "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
-$font-family-heading:         "Didact Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !default;
+$font-family-heading:         "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
@@ -294,7 +294,7 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.7 !default;
-$line-height-heading:         1.1 !default;
+$line-height-heading:         1.4 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;

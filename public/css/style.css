@@ -352,7 +352,7 @@ template {
 
 @media (min-width: 1400px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1580px;
+    max-width: 1440px;
   }
 }
 
@@ -6029,8 +6029,8 @@ html, body {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Didact Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  line-height: 1.1;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  line-height: 1.4;
   margin-bottom: 15px;
 }
 
@@ -6098,8 +6098,25 @@ a:hover, a:focus {
   outline: none;
 }
 
-table td {
-  padding: 8px 15px;
+table .thead {
+  border-bottom: 1px solid #ced4da;
+}
+
+table .tbody {
+  padding: 6px 0;
+}
+
+table th, table td {
+  padding: 8px 12px;
+  line-height: 1.4;
+}
+
+table tr {
+  border-bottom: 1px solid #ced4da;
+}
+
+table tr:last-child {
+  border-bottom: none;
 }
 
 .link-inverse {
@@ -6108,6 +6125,19 @@ table td {
 
 .link-inverse:hover {
   color: #212529;
+}
+
+.label, .card__label {
+  display: inline-block;
+  padding: 4px 6px;
+  background-color: #e9ecef;
+  line-height: 1;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+.label:last-child, .card__label:last-child {
+  margin-right: 0;
 }
 
 .bg-black {
@@ -6160,6 +6190,14 @@ table td {
 
 .text-lead, .lead {
   font-size: 1.1rem;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
 }
 
 .img-fluid {
@@ -6606,6 +6644,16 @@ table td {
   color: #212529;
 }
 
+.link_vk {
+  background: url("../icon/vk.svg") no-repeat center left/12px;
+  padding-left: 16px;
+}
+
+.link_fb {
+  background: url("../icon/fb.svg") no-repeat center left/12px;
+  padding-left: 16px;
+}
+
 .list {
   list-style: none;
   margin: 0;
@@ -6686,11 +6734,10 @@ table td {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: absolute;
-  top: 80px;
+  top: 60px;
   right: 0px;
   width: 320px;
   max-height: calc(100vh - 80px);
-  overflow-y: auto;
   z-index: 999;
   background-color: #f8f9fa;
   text-align: right;
@@ -6715,6 +6762,10 @@ table td {
 
 .header__nav-item:last-child {
   margin-bottom: 30px;
+}
+
+.header__nav.collapse.show {
+  overflow-y: auto;
 }
 
 .header__contact {
@@ -6754,6 +6805,9 @@ table td {
     -ms-flex: 0 0 calc(100% - 300px);
     flex: 0 0 calc(100% - 300px);
     max-width: calc(100% - 300px);
+  }
+  .header__nav {
+    top: 80px;
   }
 }
 
@@ -6926,8 +6980,32 @@ table td {
   max-width: 100%;
 }
 
+.page-item .page-link:hover {
+  color: #000;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #e9ecef;
+}
+
+.page-item.active .page-link {
+  background-color: #b72126;
+  border-color: #b72126;
+}
+
+.page-item.disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
 .slider__item {
   padding: 30px;
+}
+
+.slider__title {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .slider__content {
@@ -6973,6 +7051,15 @@ table td {
   .slider__item {
     padding: 45px;
   }
+  .slider__title {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .slider__title {
+    font-size: 26px;
+  }
 }
 
 .slider_index {
@@ -6990,7 +7077,8 @@ table td {
 }
 
 .slider_index__item.slick-slide {
-  height: 100%;
+  height: 360px;
+  overflow: hidden;
 }
 
 .slick-initialized .slick-slide.slider_index__item {
@@ -7127,17 +7215,7 @@ table td {
 }
 
 .card__label {
-  display: inline-block;
-  padding: 4px 6px;
-  background-color: #e9ecef;
   font-weight: bold;
-  line-height: 1;
-  border-radius: 4px;
-  margin-right: 6px;
-}
-
-.card__label:last-child {
-  margin-right: 0;
 }
 
 .card__icon {

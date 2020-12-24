@@ -37,4 +37,12 @@
             color: $link-color;
         }
     }
+    &_vk{
+        background: url("../icon/vk.svg") no-repeat center left / 12px;
+        padding-left: 16px;
+    }
+    &_fb{
+        background: url("../icon/fb.svg") no-repeat center left / 12px;
+        padding-left: 16px;
+    }
 }

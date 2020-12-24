@@ -4,17 +4,8 @@
     border: 1px solid $gray-300;
     
     &__label{
-        display: inline-block;
-        padding: 4px 6px;
-        background-color: $gray-200;
+        @extend .label;
         font-weight: bold;
-        line-height: 1;
-        border-radius: 4px;
-        margin-right: 6px;
-
-        &:last-child{
-            margin-right: 0;
-        }
     }
     &__icon{
         width: auto;
