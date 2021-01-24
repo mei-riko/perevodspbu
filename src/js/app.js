@@ -50,7 +50,8 @@ $(document).ready(() =>{
 			slidesToScroll: 1,
 			arrows        : false,
 			dots          : true,
-      autoplay      : false
+      autoplay      : true,
+      autoplaySpeed : 6000
     });
   };
   // Modal
