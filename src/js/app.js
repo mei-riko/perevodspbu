@@ -1,11 +1,13 @@
-import $ from 'jquery'
+// eslint-disable-next-line import/no-unresolved
+import $ from 'jquery';
 import '../../node_modules/popper.js/dist/umd/popper';
 import '../../node_modules/bootstrap/js/dist/util';
 import '../../node_modules/bootstrap/js/dist/tooltip';
 import '../../node_modules/bootstrap/js/dist/collapse';
+import './form';
 
 $(document).ready(() =>{
-  $(".scroll").click(function() {
+  $('.scroll').on('click', function scroll() {
     $("html, body").animate({
        scrollTop: $($(this).attr("href")).offset().top + "px"
     }, {
@@ -33,25 +35,26 @@ $(document).ready(() =>{
       },
     })
   }
-  $('input.phone').on('keydown', function(event) {
+  $('input.phone').on('keydown', function phonemask(event) {
     if (event.keyCode === 13 && !$(this).inputmask("isComplete") ) {
       event.preventDefault();
       $(this).blur();
       return false;
     }
+    return null;
   });
 
   // Slider
   if( $('.slider').length > 0 ){
     // Slider On Index Page
-    let $slickContent = $('.slider.slider_index');
+    const $slickContent = $('.slider.slider_index');
 		$slickContent.slick({
 			slidesToShow  : 1,
 			slidesToScroll: 1,
 			arrows        : false,
 			dots          : true,
       autoplay      : true,
-      autoplaySpeed : 6000
+      autoplaySpeed : 5000
     });
   };
   // Modal
@@ -60,9 +63,26 @@ $(document).ready(() =>{
     touch: false
   });
   // Отмена стандартного поведения ссылки
-  $('a[data-trigger="click"]').click(function(e){
-    e.preventDefault();
-  })
+  $('a[data-trigger=click]').on('click', (event)=> {
+    event.preventDefault();
+  });
+  // Mobile Nav
+  $('.header .header__toggler').on('click', () => {
+    let parent = '';
+    parent = $('.header .header__navbar');
+    // console.log( parent );
+    if( parent.hasClass('active') ){
+      parent.removeClass('active');
+      $('body').removeAttr('style');
+    } else{
+      parent.addClass('active');
+      $('body').css('overflow','hidden');
+    }
+  });
 });
 
-import './form.js';
+$( window ).resize(() => {
+  if( window.innerWidth > 1399 ){
+    $('body').removeAttr('style');
+  }
+});

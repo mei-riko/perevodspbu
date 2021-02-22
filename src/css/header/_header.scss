@@ -26,7 +26,8 @@
         max-width: 60px;
         justify-content: flex-end;
 
-        position: relative;
+        position: inherit;
+        padding: 0 $spacer/2 0 0;
     }
     &__toggler{
         // display: none;
@@ -47,10 +48,11 @@
     &__nav{
         flex-wrap: wrap;
         position: absolute;
-        top: 60px;
-        right: 0px;
-        width: 320px;
-        max-height: calc(100vh - 80px);
+        top: 100px;
+        right: 15px;
+        width: calc(100% - 30px);
+        height: 100%;
+        max-height: calc(100vh - 100px);
         z-index: 999;
 
         background-color: $gray-100;
@@ -65,16 +67,21 @@
             max-width: 100%;
             justify-content: flex-end;
 
-            padding: 0 $spacer;
-            margin-top: $spacer;
+            padding: $spacer $spacer 0;
+
+            font-size: 16px;
+            text-align: center;
 
             &:last-child{
-                margin-bottom: $spacer;
+                padding: $spacer;
             }
         }
 
         &.collapse.show{
             overflow-y: auto;
+        }
+        &.collapsing {
+            transition: height 0s ease;
         }
     }
     &__contact{
@@ -110,7 +117,26 @@
             max-width: calc(100% - 300px);
         }
         &__nav{
-            top: 80px;
+            top: 120px;
+            max-height: calc(100vh - 120px);
+            width: 510px;
+            right: calc( (100% - 510px)/2 );
+        }
+    }
+}
+@media (min-width: map-get($map: $grid-breakpoints, $key: md)) {
+    .header{
+        &__nav{
+            width: 690px;
+            right: calc( (100% - 690px)/2 );
+        }
+    }
+}
+@media (min-width: map-get($map: $grid-breakpoints, $key: lg)) {
+    .header{
+        &__nav{
+            width: 930px;
+            right: calc( (100% - 930px)/2 );
         }
     }
 }
@@ -137,6 +163,7 @@
             position: unset;
             background: inherit;
             width: auto;
+            height: auto;
             max-height: unset;
             overflow-y: unset;
 
@@ -147,12 +174,11 @@
                 flex-wrap: nowrap;
                 align-items: center;
 
-                // margin-top: 0;
-                margin-top: $spacer/2;
+                font-size: 13px;
+                padding: $spacer/2 0 0;
 
                 &:last-child{
-                    margin-top: 0;
-                    margin-bottom: 0;
+                    padding: 0;
                 }
             }
         }
