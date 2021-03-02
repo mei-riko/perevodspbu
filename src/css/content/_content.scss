@@ -6,6 +6,15 @@
     p{
         line-height: $line-height-base;
     }
+
+    &__subtitle{
+        font-size: 1.25rem;
+        line-height: $line-height-heading!important;
+        color: $gray-600;
+
+        border-bottom: 1px solid $gray-300;
+        padding-bottom: map-get($spacers, 2);
+    }
 }
 
 @media (min-width: map-get($map: $grid-breakpoints, $key: sm)) {

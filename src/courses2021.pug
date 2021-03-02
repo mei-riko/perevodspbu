@@ -1,0 +1,254 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Courses
+
+        link(href="https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans:300,400,700,800&display=swap&subset=cyrillic" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="./js/jquery.min.js")
+        include chunks/header.pug
+        section.container
+            .content-breadcrumbs
+                ul.breadcrumbs
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href="/index.html") Домой
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href="/catalog.html") Программы обучения
+                    li.breadcrumbs__item.breadcrumbs__item--active Переводчик в сфере профессиональной коммуникации
+            .content
+                .row
+                    .col-xl-8.col-lg-7.col-12
+                        //- Общая информация
+                        h1 Синхронный перевод и межкультурная коммуникация
+                        p.content__subtitle Simultaneous Interpretation and Intercultural Communication 
+                        p.text-red.text-bold.text-small.mb-3 модульная программа шифр B1.2138.*
+                        p.text-bold Цели программы:
+                        ul
+                            li познакомить с профессией переводчика-синхрониста
+                            li продемонстрировать специальное оборудование и программное обеспечение для синхронного перевода
+                            li обучить ключевым техникам синхронного перевода
+                        p.text-bold На кого рассчитана программа:
+                        ul
+                            li студенты и выпускники лингвистических и переводческих специальностей
+                            li выпускники программы «Переводчик в сфере профессиональной коммуникации»
+                    .col-xl-4.col-lg-5.col-12.mt-3.mt-lg-0
+                        .card.card_programm.mb-2
+                            .card_programm__title Старт ближайших групп
+                            .card_programm__content 12 октября 2020 г., прием документов до 8 октября 2020
+                            .card_programm__title Языки
+                            .card_programm__content английский (очная и дистанционная форма обучения), 
+                                | немецкий, французский, испанский, итальянский, 
+                                | китайский (дистанционная форма обучения)
+                            .card_programm__title Трудоемкость
+                            .card_programm__content 1 500 учебных часов
+                            .card_programm__title Продолжительность курса
+                            .card_programm__content 2 года (4 семестра)
+                            .card_programm__title Стоимость
+                            .card_programm__content от 159 600 до 211 600 руб. (оплата в 4 этапа)
+                                .text-small возможен налоговый вычет до 13%
+                        .mb-3
+                            button.btn.btn_action.btn--full(data-fancybox="" data-src="#registerModal" href="javascript;") ЗАПИСАТЬСЯ НА КУРС
+                .row
+                    .col-xl-8.col-lg-7.col-12
+                        //- Дополнительная информация
+                        .card.mb-2
+                            p.card__body.card__body_info
+                                span.text-bold.text-red Документ об окончании:
+                                |  удостоверение о повышении квалификации СПбГУ
+                        p Синхронный перевод по праву считается самым сложным видом переводческой деятельности. Специалист должен обладать не только высоким уровнем родного и иностранного языка, но и скоростью реакции, стрессоустойчивостью и высокой концентрацией. Переводчик-синхронист начинает перевод предложения еще до того, как оно будет закончено, что требует определенных навыков.
+                        h2 Что входит в курс синхронного перевода?
+                        p На курсах подготовки синхронных переводчиков слушатели получают необходимые знания, которые помогут в дальнейшей работе по выбранной специальности. 
+                            | Во время обучения большое внимание уделяется практике синхронного перевода благодаря интерактивному формату занятий, построенных по модели реальных рабочих ситуаций переводчика-синхрониста.
+                        .card
+                            a.text-bold.card__title.card__title_info(data-toggle="collapse" data-target="#infoModul1" aria-expanded="false" aria-controls="infoModul1") Синхронный перевод и межкультурная коммуникация. Первая ступень
+                            .collapse#infoModul1
+                                .card__body
+                                    p Модуль предназначен для тех, кто хочет впервые познакомиться с основными понятиями и техниками синхронного перевода и попробовать свои силы в этой переводческой отрасли. 
+                                    p
+                                        span.text-bold.text-red Примерная тематика модуля: 
+                                        | социальные проблемы и экологические вызовы. Преподаватель выбирает конкретную тематику в зависимости от уровня и состава группы.
+                                    p.text-bold Содержание модуля:
+                                    ul
+                                        li специфика работы синхронного переводчика 
+                                        li профессиональная этика  
+                                        li становление навыка синхронного перевода 
+                                        li упражнения, направленные на развитие скорости реакции, а также навыка одновременного слушания и говорения 
+                                        li работа с аутентичными аудио- и видеоматериалами на английском и русском языках
+                                        li итоговый экзамен (формат экзамена определяет преподаватель).
+                        .card.card_programm.mt-3
+                            .card__body.card__body_info
+                                p.card__body-title В результате обучения Вы:
+                                ul 
+                                    li познакомитесь со спецификой и принципами работы синхронного переводчика
+                                    li улучшите навыки аудирования
+                                    li разовьете кратковременную память и научитесь концентрировать внимание
+                                    li разовьете первичные или углубленные навыки синхронного перевода (в зависимости от модуля)
+                                    li научитесь работать с терминологией и получите готовый глоссарий по пройденной теме
+                                    li получите экспертную оценку Вашего потенциала и персональные рекомендации для дальнейшего обучения профессии и профессиональной деятельности переводчика-синхрониста
+                        .mt-2.mb-3
+                            a.btn.btn_action.btn--full Записаться на курс
+                        //- Преподаватели
+                        h4 Наши преподаватели
+                        p Коллектив Факультета иностранных языков СПбГУ, действующие переводчики-синхронисты с многолетним опытом работы на крупных международных мероприятиях. В ходе курса синхронного перевода они помогают слушателям понять специфику и нюансы работы синхронного переводчика. 
+                        .card.mb-2
+                            p.card__body.card__body_info
+                                span.text-bold.text-red NEW:
+                                |  С 2020-2021 учебного года обучение проводится с использованием дистанционных технологий, полностью заменяющих использование оборудования для синхронного перевода. Эта технология обучения уже отработана на практике обучения нескольких групп, а также в рамках тренингов по синхронному переводу, которые регулярно проводятся нашими преподавателями. Наши выпускники владеют навыками удаленного синхронного перевода, который становится все более актуальным и востребованным в современных условиях.
+                    .col-xl-4.col-lg-5.col-12.mt-3.mt-lg-0
+                        .card.mb-2
+                            .card__body.card__body_info.text-small Требования к уровню образования: среднее специальное, неоконченное высшее, высшее
+                        .content-sidebar
+                            .content-sidebar__item.card
+                                a.card__title(data-toggle="collapse" data-target="#nav1" aria-expanded="false" aria-controls="nav1") Программы обучения
+                                .collapse#nav1
+                                    nav.card__body
+                                        a.content-sidebar__parent-link(href="#") Школа перевода
+                                        a.content-sidebar__child-link(href="#") Переводчик в сфере профессиональной коммуникации
+                                        a.content-sidebar__child-link(href="#") Конференц-перевод
+                                        a.content-sidebar__child-link(href="#") Синхронный перевод
+                                        a.content-sidebar__parent-link(href="#") Школа гидов-переводчиков
+                                        a.content-sidebar__child-link(href="#") Гид-переводчик
+                                        a.content-sidebar__parent-link(href="#") Лекции, семинары, мастер-классы
+                        .card.mt-2
+                            a.card__title(data-toggle="collapse" data-target="#info1" aria-expanded="false" aria-controls="info1") Организация обучения
+                            .collapse#info1
+                                .card__body 
+                                    p Набор на программу «Переводчик в сфере профессиональной коммуникации» производится ежегодно. Начало занятий - 2 неделя октября и 2 неделя февраля. Подавать заявки на обучение можно в течение всего года.
+                                    p Слушатели зачисляются на программу в соответствии с результатами 
+                                        | вступительного тестирования и распределяются по 3 профилям обучения 
+                                        | в соответствии с результатами вступительных испытаний: 
+                                    ul
+                                        li базовый профиль − для уровня владения иностранным языком на уровне B1/B2, 
+                                        li продвинутый профиль − для уровня владения иностранным языком на уровне B2/C1,
+                                        li для уровня владения иностранным языком на уровне C1/C2.
+                        .card.mt-2
+                            .card__body.card__body_info
+                                img.img-fluid.mb-2(src="https://www.perevod.spbu.ru/images/graphic-02.svg" alt="Требуемый уровень подготовки − не ниже В1 по Общеевропейской шкале языковых компетенций (CEFR)." title="Требуемый уровень подготовки − не ниже В1 по Общеевропейской шкале языковых компетенций (CEFR).")
+                                p.text-small Требуемый уровень подготовки − не ниже В1 по Общеевропейской шкале языковых компетенций (CEFR).
+            .p-3.p-md-4.bg-light-grey
+                h3.text-bold.text-uppercase.mb-3 Преимущества обучения у нас
+                .card
+                    a.card__title(data-toggle="collapse" data-target="#add" aria-expanded="false" aria-controls="add") Синхронный перевод и межкультурная коммуникация. Первая ступень
+                    .collapse#add
+                        .card__body
+                            p Модуль предназначен для тех, кто хочет впервые познакомиться с основными понятиями и техниками синхронного перевода и попробовать свои силы в этой переводческой отрасли. 
+            .p-3.p-md-4.bg-white
+                //- Методики обучения
+                .card
+                    .card__body.card__body_info
+                        p.card__body-title Методы обучения
+                        .row
+                            .col-xl-6.col-lg-12.col-md-6.col-12
+                                p.text-bold.mb-1 В аудитории
+                                p интерактивные практические занятия и занятия в лингафонных классах, тренинги (симуляция работы устного переводчика) открытые лекции и мастер-классы известных переводчиков, встречи с представителями переводческих фирм, отработка профессиональных кейсов
+                            .col-xl-6.col-lg-12.col-md-6.col-12.mt-2.mt-md-0.mt-lg-2.mt-xl-0
+                                p.text-bold.mb-1 Онлайн* (с 2019-2020 уч. года)
+                                p Теоретические дисциплины в формате онлайн-курсов, материалы для самостоятельной работы и промежуточной аттестации на онлайн-платформе, виртуальная среда обучения (форумы, виртуальные группы)
+                            .col-xl-6.col-lg-12.col-md-6.col-12.mt-2
+                                p.text-bold.mb-1 Командная работы
+                                p Коллективные отраслевые глоссарии, участие в научно-практических мероприятиях.
+        
+        include chunks/footer.pug
+        
+        .modal#registerModal
+            form.form.form_modal.form_registration(method="post")
+                p.form__label Выберите программу обучения:
+                select.input.input--full(name="programm")
+                    optgroup(label="Школа перевода")
+                        option(value="Переводчик в сфере профессиональной коммуникации" data-lang="combo1") Переводчик в сфере профессиональной коммуникации
+                        option(value="Конференц-перевод (синхронный и последовательный перевод)" data-lang="en") Конференц-перевод (синхронный и последовательный перевод)
+                        option(value="Синхронный перевод и межкультурная коммуникация" data-lang="combo2") Синхронный перевод и межкультурная коммуникация
+                        option(value="Искусство перевода" data-lang="en") Искусство перевода
+                        option(value="Инновационные технологии в переводе" data-lang="en") Инновационные технологии в переводе
+                    optgroup(label="Школа гидов-переводчиков")
+                        option(value="Переводчик в сфере профессиональной коммуникации («Гид-переводчик»)" data-lang="combo3") Переводчик в сфере профессиональной коммуникации («Гид-переводчик»)
+                    optgroup(label="Повышение квалификации преподавателей ВУЗов")
+                        option(value="Современные тенденции в преподавании перевода" data-lang="en") Современные тенденции в преподавании перевода
+                        option(value="Английский язык для преподавателей специальных дисциплин в вузах" data-lang="en") Английский язык для преподавателей специальных дисциплин в вузах
+                    optgroup(label="Курсы иностранных языков")
+                        option(value="Курс разговорного английского языка" data-lang="en") Курс разговорного английского языка
+                        option(value="Курс разговорного немецкого языка" data-lang="de") Курс разговорного немецкого языка
+                        option(value="Курс разговорного французского языка" data-lang="fr") Курс разговорного французского языка
+                        option(value="Курс разговорного итальянского языка" data-lang="it") Курс разговорного итальянского языка
+                        option(value="Курс разговорного испанского языка" data-lang="es") Курс разговорного испанского языка
+                        option(value="Интенсивный курс английского языка" data-lang="en") Интенсивный курс английского языка
+                        option(value="Практическая фонетика английского языка: звуки, ритм, интонация" data-lang="en") Практическая фонетика английского языка: звуки, ритм, интонация
+                        option(value="Деловой английский язык. BEC" data-lang="en") Деловой английский язык. BEC
+                        option(value="Английский язык для юристов. TOLES" data-lang="en") Английский язык для юристов. TOLES
+                        option(value="Подготовка к экзамену IELTS" data-lang="en") Подготовка к экзамену IELTS
+                        option(value="Подготовка к экзамену TOEFL" data-lang="en") Подготовка к экзамену TOEFL
+                    optgroup(label="Корпоративное обучение")
+                        option(value="Английский язык с элементами делового и профессионального общения" data-lang="en") Английский язык с элементами делового и профессионального общения
+                p.form__label Выберите язык:
+                select.input.input--full(name="lang")
+                    option(value="английский" data-lang="en") английский
+                    option(value="немецкий" data-lang="de") немецкий
+                    option(value="французский" data-lang="fr") французский
+                    option(value="испанский" data-lang="es") испанский
+                    option(value="итальянский" data-lang="it") итальянский
+                    option(value="китайский" data-lang="ch") китайский
+                p.form__label Есть ли у Вас документ, подтверждающий уровень владения иностранным языком?    
+                .radio
+                    input.radio__input#docs1(data-info="docs" type="radio" name="docs[]" value="да")
+                    label.radio__label(for="docs1") Да
+                .radio.mt-1
+                    input.radio__input#docs2(data-info="docs" type="radio" name="docs[]" value="нет")
+                    label.radio__label(for="docs2") Нет
+                //- Есть документ
+                .form_registration__docs.mt-2
+                    p.form__label Уровень владения иностранным языком:
+                    select.input.input--full(name="diplom")
+                        option(value="A1") A1
+                        option(value="A2.1") A2.1
+                        option(value="A2.2") A2.2
+                        option(value="B1") B1
+                        option(value="B2") B2
+                        option(value="C1") C1
+                        option(value="C2") C2
+                    p.text-small по Общеевропейской шкале языковой компетенции.
+                    .form__row.row.mt-2
+                        .col-12.col-md-6
+                            p.form__label ФИО  
+                                sup *
+                            input.input.input--full(type="text" id="nameReg" name="name" value="")
+                            span.form__validation.error_email
+                        .col-12.col-md-6
+                            p.form__label Контактный телефон 
+                                sup *
+                            input.input.input--full.phone(type="tel" id="phoneReg" name="phone" value="7")
+                            span.form__validation.error_phone
+                    .form__row.row.mt-1.mb-1
+                        .col-12.col-md-6
+                            p.form__label Введите своей e-mail 
+                                sup *
+                            input.input.input--full(type="email" id="emailReg" name="email" value="")
+                            span.form__validation.error_email
+                        .col-12.col-md-6.mb-1
+                            p.form__label Какое у вас образование?
+                            select#selectEducation.input.input--full(name="education")
+                                option(value="высшее") высшее
+                                option(value="неоконченное высшее (студент)") неоконченное высшее (студент)
+                                option(value="среднее специальное") среднее специальное
+                                option(value="среднее") среднее
+                                option(value="другое") другое
+                    button.btn.btn_action(type="submit") Записаться на курс
+                    .checkbox.text-left.mt-2 
+                        input.checkbox__input#emailCheck(type="checkbox" name="agree[]" checked="checked")
+                        label.checkbox__label.text-small(for="emailCheck") 
+                            | даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года 
+                            | №152-ФЗ «О персональных данных», на условиях и для целей, определенных в 
+                            a(href="/files/policy.pdf" target="_blank" title="Согласии на обработку персональных данных") Согласии на обработку персональных данных
+                //- Нет документа
+                .form_registration__no-docs.mt-2
+                    p Предлагаем Вам определить уровень владения иностранным языком онлайн на нашем сайте:
+                    a.btn.btn_action(href="/") Пройти тестирование
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+        
+        script(src="./js/app.min.js")

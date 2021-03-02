@@ -1,0 +1,45 @@
+.link-programm{
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+
+    &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        content: '';
+        
+        background: rgba(0,0,0,.45);
+        z-index: 1;
+    }
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        content: '';
+
+        background-color: #9692c7;
+
+        transform: translateX( calc( -100% + 10px) );
+        transition: .4s;
+        z-index: 2;
+    }
+
+    &__inside{
+        position: relative;
+        z-index: 3;
+    }
+
+    &:hover{
+        text-decoration: none;
+        &:after{
+            transform: translateX( 0 );
+        }
+    }
+}
